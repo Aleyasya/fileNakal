@@ -6,89 +6,74 @@
 body {
   font-family: "Jacques Francois", serif;
   font-weight: 400;
+  font-style: normal;
 }
 .container {
-  background-color: #fcfae2;
+  background-color: #EAF4F5;
   max-width: 100%;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.small-container {
-  max-width: 1080px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-}
+
+
 .col-4 {
-  flex-basis: 45%;
-  margin: 20px;
-  padding: 20px;
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5;
   text-align: center;
-  background: #d4d8ea;
-  border-radius: 10px;
-  min-width: 280px;
-  cursor: pointer;
+  border: 1px solid black;
+
 }
 .col-4 img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 50%;
 }
 .title {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
   color: #555;
 }
 .row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 50px;
+  flex-wrap: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  /*border: 1px solid #4caf50;*/
 }
-/*------------------NAV BAR-------------------*/
-.navbar {
-  display: flex;
-  align-self: center;
-  justify-content: space-between;
-  padding: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.navbar-left,
-.navbar-right {
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
+
+body {
+  font-family: "Gotu", serif;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #333;
 }
-.navbar-left ul,
-.navbar-right ul {
-  display: flex;
-  list-style-type: none;
+
+.bar {
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  background: #004154;
 }
-.navbar-left ul li,
-.navbar-right ul li {
-  margin: 0 15px;
+
+header {
+  color: #000;
+  background-color: #fff;
 }
-.navbar-center img {
-  display: block;
-  margin: 0px auto;
-  padding: 0px 5px;
-}
-.navbar-center h1 {
-  align-items: center;
-  font-size: 20px;
-  margin-top: 0px;
-  padding-bottom: 35px;
-}
-a {
-  text-decoration: none;
-  color: #555;
-  font-size: 20px;
-}
-a:hover {
-  color: rgb(179, 50, 211);
-}
+
+
 /*------------------ POOOOOOOOOOOOSTERRRRRRRRRRRRRRRRRRRRRR---------------------------*/
 .poster {
-  background: radial-gradient(#edecb2, #d4d8ea, #9499db);
   position: relative;
   width: 100%;
   height: 100vh;
@@ -96,10 +81,12 @@ a:hover {
 }
 .poster img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover; /* maeks the image not look distorted*/
   display: block;
   transform: scale(1);
+  border: 3px solid #4caf50;
+
 }
 .poster-text {
   position: absolute;
@@ -117,9 +104,99 @@ a:hover {
   font-weight: bold;
   margin: 0;
 }
+
+/* MNAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+.containerthatcontains {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Logo styles */
+.containerthatcontains .logo {
+  flex-shrink: 0;
+}
+
+/* Links styles */
+.containerthatcontains .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.containerthatcontains li a {
+  font-family: "Gotu", serif;
+  color: #333;
+  text-decoration: none;
+  font-size: 33px;
+  transition: color 0.3s;
+}
+
+.containerthatcontains .links i {
+  color: grey; /* color of the bag*/
+}
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #eaf4f5;
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-container input[type="text"] {
+  text-align: center;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background: #eaf4f5;
+  color: black;
+  border-radius: 30px;
+}
+
+.search-container button {
+  background: #eaf4f5;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 17px;
+}
+
+.search-container button i {
+  color: black; /* Ensures icon is visible */
+}
+
+.search-container button:hover {
+  background: #ffffff;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: black;
+}
+
+header::after {
+  padding-top: 5px;
+  content: "";
+  background: #004154;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
 /*--------------------options--------------*/
 .lab-options {
-  background: #fcfae2;
+  background: #ffffff;
 }
 .lab-options .title {
   padding-top: 30px;
