@@ -6,221 +6,378 @@
     <title>Oscent | Snacks</title>
     <link rel="stylesheet" href="skstyle.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Jacques+Francois&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eater&family=Jacques+Francois&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
     />
   </head>
   <body>
-    <div class="header">
-        <div class="container">
-          <div class="navbar">
-              <!-- LEFT NAVBAR -->
-               <div class="navbar-left">
-                  <ul>
-                      <li><a href="">About</a></li>
-                      <li><a href="">Services</a></li>
-                      <li><a href="shop.html">Shop</a></li></nav>
-                    </ul>
-               </div>
-               <!-- RIGHT NAVBAR-->
-               <div class="navbar-center">
-                  <div class="logo-icon">
-                    <a href="index.html"><img src="images/logo.png" alt="" width="130px" height="120px"></a>
-                      <h1>O n e S t o p C e n t r e</h1>
-                  </div>
-               </div>
-               <div class="navbar-right">
-                  <ul>
-                      <li><a href="">My Account</a></li>
-                  </ul>
-                  <img src="images/cart.png" alt="" width="30px" height="30px">
-               </div>
+    <!---------------------- NAVBAR ------------------------->
+    <div class="bar"></div>
+    <header>
+      <div class="containerthatcontains">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="Oscent_Pictures/logo-placeholder.png"
+              alt="Logo"
+              class="logo"
+              width="120"
+            />
+          </a>
+        </div>
+        <div class="links">
+          <li><a href="#">About</a></li>
+          <li><a href="servicepage.html">Services</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">My Account</a></li>
+          <li>
+            <a href="cart1.html">
+              <i class="fas fa-shopping-bag"></i>
+            </a>
+          </li>
+        </div>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="S E A R C H" name="search" />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!---------------------- POSTER ------------------------->
+    <div class="poster">
+      <div class="poster-content">
+      <div class="poster-text">
+        <div class="image-box">
+        <img src="images/snacks.png" alt="Snacks"/>
+      </div>
+        <h4>SATISFY<br>YOUR<br>CRAVINGS</h4>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- SNACKS OPTIONS 1------------------------->
+    <hr class="separator"> <!-- This is the horizontal line separator -->
+    <div class="snacks-options1">
+      <div class="small-container">
+        
+        <h2 class="title">Our snacks got your back !</h2>
+        <div class="row">
+          <div class="col-4">
+            <!-- THis is the box that contains the snacks-->
+            <img src="images/chokichoki-removebg-preview.png" alt="" />
+            <h4>Choki Choki</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>RM 1.50</p>
+            <!--parent box-->
+            <!--parent box-->
+            <div class="quantity">
+              <button type="button" class="quantity-btn">-</button>
+              <input
+                type="number"
+                class="quantity-input"
+                name="quantity"
+                value="0"
+                min="0"
+              />
+              <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+            <!--add to cart button-->
+            <button
+              type="button"
+              class="addtocart"
+              data-name="Choki Choki"
+              data-price="1.50"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="col-4">
+            <!-- THis is the box that contains the snacks-->
+            <img src="images/nips.png" alt="" />
+            <h4>Nips</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>RM 2.20</p>
+            <!--parent box-->
+            <!--parent box-->
+            <div class="quantity">
+              <button type="button" class="quantity-btn">-</button>
+              <input
+                type="number"
+                class="quantity-input"
+                name="quantity"
+                value="0"
+                min="0"
+              />
+              <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+            <!--add to cart button-->
+            <button
+              type="button"
+              class="addtocart"
+              data-name="Nips"
+              data-price="2.20"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="col-4">
+            <!-- THis is the box that contains the snacks-->
+            <img src="images/corntoz.png" alt="" />
+            <h4>Corntoz</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>RM 1.50</p>
+            <!--parent box-->
+            <!--parent box-->
+            <div class="quantity">
+              <button type="button" class="quantity-btn">-</button>
+              <input
+                type="number"
+                class="quantity-input"
+                name="quantity"
+                value="0"
+                min="0"
+              />
+              <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+            <!--add to cart button-->
+            <button
+              type="button"
+              class="addtocart"
+              data-name="Corntoz"
+              data-price="1.50"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
-        <!---------------POSTER -------------------------->
-        <div class="poster">
-            <div class="row">
-                <!--- For the text --->
-                <div class="col-2 text-box">
-                    <div class="text-content">
-                        <h2>SATISFY <br>
-                            YOUR <br>
-                            CRAVINGS
-                        </h2>
-                        <h4>SNACKS</h4>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <img src="images/jajanjpg.png" width="3200px" height="1080px">
-            <div class="poster-text">
-                </div>
-            </div>
-            </div>          
-                </div>
-            </div>
-        </div>
-        </div>
-          
-        <!------------------------ SNACKS OPTIONS ----------------------------->
-        <div class="snack-options"><div class="small-container">
-            <h2 class="title">Our Snacks Got Your Back!</h2>
-            <div class="row">
-                <div class="col-4">
-                    <img src="images/chokichoki-removebg-preview.png" alt="">
-                    <h4>Choki Choki</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                      </div>
-                      <p>RM 2.50</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/chokichoki-removebg-preview.png" alt="">
-                        <h4>Choki Choki</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                          </div>
-                          <p>RM 2.50</p>
-                        </div>    
-                        <div class="col-4">
-                            <img src="images/chokichoki-removebg-preview.png" alt="">
-                            <h4>Choki Choki</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                              </div>
-                              <p>RM 2.50</p>
-                            </div>  
-                            <div class="col-4">
-                                <img src="images/chokichoki-removebg-preview.png" alt="">
-                                <h4>Choki Choki</h4>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                  </div>
-                                  <p>RM 2.50</p>
-                                </div>                      
-                </div>
+      </div>
+    </div>
+  </div>
+  
+            <!---------------------- SNACKS OPTIONS 2------------------------->
+            <div class="snacks-options2">
+              <div class="small-containers">
                 <div class="row">
-                    <div class="col-4">
-                        <img src="images/chokichoki-removebg-preview.png" alt="">
-                        <h4>Choki Choki</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                          </div>
-                          <p>RM 2.50</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="images/chokichoki-removebg-preview.png" alt="">
-                            <h4>Choki Choki</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                              </div>
-                              <p>RM 2.50</p>
-                            </div>    
-                            <div class="col-4">
-                                <img src="images/chokichoki-removebg-preview.png" alt="">
-                                <h4>Choki Choki</h4>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                  </div>
-                                  <p>RM 2.50</p>
-                                </div>  
-                                <div class="col-4">
-                                    <img src="images/chokichoki-removebg-preview.png" alt="">
-                                    <h4>Choki Choki</h4>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                      </div>
-                                      <p>RM 2.50</p>
-                                    </div>                      
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="images/chokichoki-removebg-preview.png" alt="">
-                            <h4>Choki Choki</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                              </div>
-                              <p>RM 2.50</p>
-                            </div>
-                            <div class="col-4">
-                                <img src="images/chokichoki-removebg-preview.png" alt="">
-                                <h4>Choki Choki</h4>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                  </div>
-                                  <p>RM 2.50</p>
-                                </div>    
-                                <div class="col-4">
-                                    <img src="images/chokichoki-removebg-preview.png" alt="">
-                                    <h4>Choki Choki</h4>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                      </div>
-                                      <p>RM 2.50</p>
-                                    </div>  
-                                    <div class="col-4">
-                                        <img src="images/chokichoki-removebg-preview.png" alt="">
-                                        <h4>Choki Choki</h4>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                          </div>
-                                          <p>RM 2.50</p>
-                                        </div>                      
-                        </div>
-            </div>   
+                  <div class="col-4">
+
+            <!-- THis is the box that contains the snacks-->
+            <img src="images/cocopie.png" alt="" />
+            <h4>Cocopie</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>RM 2.00</p>
+            <!--parent box-->
+            <!--parent box-->
+            <div class="quantity">
+              <button type="button" class="quantity-btn">-</button>
+              <input
+                type="number"
+                class="quantity-input"
+                name="quantity"
+                value="0"
+                min="0"
+              />
+              <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+            <!--add to cart button-->
+            <button
+              type="button"
+              class="addtocart"
+              data-name="Cocopie"
+              data-price="2.00"
+            >
+              Add to Cart
+            </button>
+          </div>
+        <div class="col-4">
+
+            <!-- THis is the box that contains the snacks-->
+            <img src="images/mimi.png" alt="" />
+            <h4>Mi-Mi</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>RM 1.30</p>
+            <!--parent box-->
+            <!--parent box-->
+            <div class="quantity">
+              <button type="button" class="quantity-btn">-</button>
+              <input
+                type="number"
+                class="quantity-input"
+                name="quantity"
+                value="0"
+                min="0"
+              />
+              <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+            <!--add to cart button-->
+            <button
+              type="button"
+              class="addtocart"
+              data-name="Mi-Mi"
+              data-price="1.30"
+            >
+              Add to Cart
+            </button>
+          </div>
+        <div class="col-4">
+
+            <!-- THis is the box that contains the snacks-->
+            <img src="images/creamo.png" alt="" />
+            <h4>Cream O</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>RM 3.50</p>
+            <!--parent box-->
+            <!--parent box-->
+            <div class="quantity">
+              <button type="button" class="quantity-btn">-</button>
+              <input
+                type="number"
+                class="quantity-input"
+                name="quantity"
+                value="0"
+                min="0"
+              />
+              <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+            <!--add to cart button-->
+            <button
+              type="button"
+              class="addtocart"
+              data-name="Cream O"
+              data-price="3.50"
+            >
+              Add to Cart
+            </button>
+            </div>
+          </div>
         </div>
-    </div> 
+      </div>
+    </div>
+  </div>
+  
+        
+
+    <!---------------------- SCRIPTS ------------------------->
+    <script src="janji.js"></script>
+    <script src="ProDetails.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Handle quantity buttons for all items
+        document.querySelectorAll(".quantity").forEach((quantityDiv) => {
+          const minusButton = quantityDiv.querySelector(
+            ".quantity-btn:first-of-type"
+          );
+          const plusButton = quantityDiv.querySelector(
+            ".quantity-btn:last-of-type"
+          );
+          const quantityInput = quantityDiv.querySelector(".quantity-input");
+
+          // Decrease quantity
+          minusButton.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 0;
+            if (currentValue > 0) {
+              quantityInput.value = currentValue - 1;
+            }
+          });
+
+          // Increase quantity
+          plusButton.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 0;
+            quantityInput.value = currentValue + 1;
+          });
+
+          // Validate input manually
+          quantityInput.addEventListener("input", () => {
+            let value = parseInt(quantityInput.value) || 0;
+            if (value < 0) value = 0; // Prevent negative values
+            quantityInput.value = value;
+          });
+        });
+
+        // Handle "Add to Cart" buttons
+        document.querySelectorAll(".addtocart").forEach((button) => {
+          button.addEventListener("click", () => {
+            const productName = button.getAttribute("data-name");
+            const productPrice = parseFloat(button.getAttribute("data-price"));
+            const quantityInput = button
+              .closest(".col-4")
+              .querySelector(".quantity-input");
+            const quantity = parseInt(quantityInput.value) || 0;
+
+            if (quantity > 0) {
+              console.log(
+                `Added to cart: ${productName}, Quantity: ${quantity}, Total Price: RM ${(
+                  productPrice * quantity
+                ).toFixed(2)}`
+              );
+              alert(`Added ${quantity} ${productName}(s) to cart!`);
+            } else {
+              alert("Please select a quantity greater than 0.");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
