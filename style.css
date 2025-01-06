@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gotu", serif;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar Styling */
+
+header {
+  background-color: #fff;
+  padding: 5px 20px;
+}
+
+.bar {
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  background: #004154;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Navbar */
+
+.navbar-left ul {
+  margin: 20px;
+  display: flex;
+  list-style: none;
+  padding: 5px;
+}
+
+.navbar-left ul li {
+  margin-right: 20px;
+}
+
+.navbar-left ul li a {
+  font-family: "Gotu", serif;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-left ul li a:hover {
+  color: #00bcd4;
+}
+
+.navbar-left .search-container {
+  background: #eaf4f5; /*container background color */
+  float: right;
+  border-radius: 30px;
+}
+
+.navbar-left input[type="text"] {
+  text-align: center;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  outline: none; /* Removes outline when focused */
+  background: #eaf4f5; /* Matches the container background */
+  color: black; /* Ensure text is visible */
+  border-radius: 30px; /* Optional: matches the container */
+}
+
+.navbar-left .search-container button {
+  background: #eaf4f5; /* Matches the container background */
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: white; /* Ensures icon is visible */
+  font-size: 17px;
+}
+
+.navbar-left .search-container button i {
+  color: black; /* Ensures icon is visible */
+}
+
+.navbar-left .search-container button:hover {
+  background: #008c9e;
+}
+
+.navbar-left input[type="text"]::placeholder {
+  color: black;
+}
+
+/* Center Navbar */
+.navbar-center {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto; /*GAPO TAK CENTER*/
+}
+
+.navbar-center::after {
+  margin-top: 5px;
+  padding-top: 5px;
+  content: "";
+  background: #004154;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.tagline {
+  color: #000;
+  font-size: 18px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Right Navbar */
+.navbar-right {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.navbar-right ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-right ul li {
+  padding: 10px;
+}
+
+.navbar-right ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-right ul li a:hover {
+  color: #00bcd4;
+}
+
+.cart-icon {
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+}
+
+.cart-icon:hover {
+  color: #00bcd4;
+}
+
+/* ------------------------landing page ahahahah------------*/
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-2 {
+  flex-basis: 45%;
+  text-align: center; /* penting because we need the items to be center aligned */
+}
+
+.col-2 h2 {
+  font-size: 60px;
+  line-height: 1.5;
+  font-family: "Poltawski Nowy", serif;
+  text-align: left;
+  padding-left: 50px;
+  position: relative; /* yang ni je penting */
+}
+
+.col-2 h2::after {
+  content: "";
+  background-color: #000;
+  width: 70%;
+  height: 2px;
+  position: absolute; /* yang ni je penting */
+  bottom: -10px;
+  left: 55px;
+}
+
+.col-2 p {
+  align-items: center;
+  padding-left: 55px;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 20px 0;
+  text-align: left;
+  font-family: "Jacques Francois", serif;
+  position: relative; /* yang ni je penting */
+}
+
+.col-2 .para::after {
+  content: "";
+  background-color: #000;
+  width: 70%;
+  height: 2px;
+  position: absolute; /* yang ni je penting */
+  bottom: -10px;
+  left: 55px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.estNbutton {
+  border: 3px solid #73ad21;
+  font-size: 16px;
+  margin-top: 20px;
+  position: absolute; /* yang ni je penting */
+  left: 200px;
+}
+
+.est {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #b6d3e3;
+  color: black;
+  padding: 8px 30px;
+  margin: 10px 0;
+  border-radius: 30px;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    margin-bottom: 15px;
+  }
+
+  .navbar-left ul,
+  .navbar-right ul {
+    justify-content: center;
+  }
+}
