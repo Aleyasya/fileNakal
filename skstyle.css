@@ -36,9 +36,9 @@ body {
 
 
 .separator {
-  border: 0;  /* Remove default border */
-  border-top: 40px solid #004154;  /* Customize the line thickness and color */
-  margin: 20px 0;  /* Add space above and below the line */
+  border: 0;  
+  border-top: 40px solid #004154;  
+  margin: 20px 0;  
 }
 
 .col-4 {
@@ -204,8 +204,8 @@ header::after {
   padding: 10px;
   margin-left: 90px;
   margin-top: 10px;
-  width: 100%;  /* Ensure it takes up full width inside the poster */
-  max-width: 1080px;  /* Optional: Limit the maximum width */
+  width: 100%;  
+  max-width: 1080px;  
   box-sizing: border-box;
 }
 
@@ -222,9 +222,9 @@ header::after {
 }
 
 .image-box img {
-  max-width: 100%;  /* Reduce image size */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 400px; /* Optional: Limit image height */
+  max-width: 100%;  
+  height: auto; 
+  max-height: 400px; 
   width: auto;
   align-items: center;
   justify-content: center;
@@ -256,11 +256,11 @@ header::after {
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   padding-left: 600px;
-  padding: 10px; /* Add some padding inside the green border */
+  padding: 10px; 
   /*border: 2px solid green;*/
-  letter-spacing: 10px; /* Adjust letter-spacing */
-  line-height: 2; /* Tighten the line height */
-  text-align: center; /* Center-align text inside the green border */
+  letter-spacing: 10px; 
+  line-height: 2; 
+  text-align: center; 
   color: #000;
 }
 
