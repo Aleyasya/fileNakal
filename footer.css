@@ -1,0 +1,126 @@
+footer {
+  font-family: "Gotu", serif;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.font {
+  font-family: "Fresca", serif;
+}
+
+.footer-pages a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-pages a:hover {
+  text-decoration: underline;
+}
+
+.footer-pages li {
+  margin: 0;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section form {
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media li {
+  margin-right: 10px;
+}
+
+.social-media a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  padding-right: 20px;
+}
+
+.footer-section form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-section form input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: black;
+  border-radius: 3px 0 0 3px;
+}
+
+.footer-section form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #004154;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 20px;
+}
+
+.font {
+  font-size: 15px;
+}
