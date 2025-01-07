@@ -65,39 +65,157 @@
                 
           <!------------- POSTER ----------------->
           <div class="poster">
-            <img src="images/labClothes.png" width="3200px" height="1080px">
+            <div class="poster-content">
+              <div class="image-box">
+              <img src="images/labpage.png" alt="Lab"/>
+            </div>
             <div class="poster-text">
-                <h4>LAB ATTIRE</h4>
+              <div class="poster-content">
+              <h4>SHOP YOUR<br>LAB ATTIRE<br>NOW !!!</h4>
+                </div>
+              </div>
             </div>
-            </div>
-            <!------------- options --------------->
+          </div>
+          <div class="bar"></div>
+
+
+            <!------------- LAB OPTIONS --------------->
             <div class="lab-options">
                 <div class="small-container">
                     <h2 class="title">From Head to Toe, Our Lab Coats and Boots Have You Covered!</h2>
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="images/coat-removebg-preview.png" alt="">
+                      <div class="row">
+                        
+                          <!-- THis is the box that contains the coat-->
+                            <div class="col-4">
+                            <img src="images/labattire.png" alt="">
                             <h4>Lab Coat</h4>
                             <p>RM 70</p>
-                            <a href="easteregg.html" class="btn">S</a>
-                            <a href="easteregg.html" class="btn">M</a>
-                            <a href="easteregg.html" class="btn">L</a>
-                            <a href="easteregg.html" class="btn">XL</a>
-                            <a href="easteregg.html" class="btn">XXL</a>
-                        </div>
-                        <div class="col-4">
-                            <img src="images/boots-removebg-preview.png" alt="">
+
+                            <!-----------SIZES OPTIONS------------->
+
+                            <div class="sideinfo"> <!--------penting-->
+                              <form id="orderForm">
+                              <div class="Size">
+                                <label for="Size"></label>
+                                <select id="Size" required>
+                                  <option value="" disabled selected> Size </option>
+                                  <option >S</option>
+                                  <option >M</option>
+                                  <option >L</option>
+                                  <option >XL</option>
+                                  <option >2XL</option>
+                                  <option >3XL</option>
+                                </select></div>
+                              <br>
+                              </select></div>
+                              <br>
+                              </form>
+                              
+                            <!--parent box-->
+                              <div class="quantity">
+                                <button type="button" class="quantity-minus">-</button>
+                                  <input
+                                    type="number"
+                                    class="quantity-input"
+                                    name="quantity"
+                                    value="0"
+                                    min="0"
+                                  />
+                              <button type="button" class="quantity-plus">+</button>
+                          </div>
+                          <br />
+                           <!--add to cart button-->
+                           <div class="actions">
+                            <!--add to cart button-->
+                            <button
+                              type="button"
+                              class="addtocart"
+                              data-name="Lab Coat"
+                              data-price="70.0"
+                            >
+                              Add to Cart
+                            </button>
+                            </div>
+                          </div>
+
+                          <!-- THis is the box that contains the boots-->
+                              <div class="col-4">
+                            <img src="images/boots.png" alt="">
                             <h4>Boots</h4>
                             <p>RM 36</p>
-                            <a href="easteregg.html" class="btn">37</a>
-                            <a href="easteregg.html" class="btn">39</a>
-                            <a href="easteregg.html" class="btn">42</a>
-                            <a href="easteregg.html" class="btn">45</a>
-                            <a href="easteregg.html" class="btn">47</a>
+
+                            <!-----------SIZES OPTIONS------------->
+                            <div class="sideinfo"> <!--------penting-->
+                              <form id="orderForm">
+                              <div class="Size">
+                                <label for="Size"></label>
+                                <select id="Size" required>
+                                  <option value="" disabled selected> Size </option>
+                                  <option >34</option>
+                                  <option >36</option>
+                                  <option >37</option>
+                                  <option >40</option>
+                                  <option >42</option>
+                                  <option >48</option>
+                                </select></div>
+                              <br>
+                              </select></div>
+                              <br>
+                              </form>
+
+                            <!--parent box-->
+                            <div class="quantity">
+                              <button type="button" class="quantity-minus">-</button>
+                                <input
+                                  type="number"
+                                  class="quantity-input"
+                                  name="quantity"
+                                  value="0"
+                                  min="0"
+                                />
+                            <button type="button" class="quantity-plus">+</button>
+                        </div>
+                        <br />
+                         <!--add to cart button-->
+                         <div class="actions">
+                          <button
+                            type="button"
+                            class="addtocart"
+                            data-name="Boots"
+                            data-price="RM36.00"
+                          >
+                          Add to Cart
+                          </button>
+                         </div>
+                          
+                          </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+    <!---------------------- SCRIPTS ------------------------->
+    <script src="janji.js"></script>
+    <script src="ProDetails.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      function redirectToBuyNow() {
+        const productName = "Lab Coat";
+        const productPrice = 70.0;
+        const quantity = document.getElementById("quantity").value;
+
+        window.location.href = `buynow.html?product=${encodeURIComponent(
+          productName
+        )}&price=${productPrice}&quantity=${quantity}`;
+      }
+    </script>
             
 </body>
 <!-------------FOOOTER--------------->

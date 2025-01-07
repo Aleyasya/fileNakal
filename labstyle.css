@@ -8,6 +8,8 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+/*-------------------coat and boots----------------------*/
 .container {
   background-color: #EAF4F5;
   max-width: 100%;
@@ -16,34 +18,54 @@ body {
   padding-right: 15px;
 }
 
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  background-color: #ffffff;
+}
 
-.col-4 {
-  flex-basis: 25%;
-  padding: 10px;
-  min-width: 200px;
-  margin-bottom: 50px;
-  transition: transform 0.5;
+
+.col-4{
+  flex: 1;
+  padding: 0px;
+  margin: 20px 50px;
   text-align: center;
-  border: 1px solid black;
+  border: 3px solid black;
+  background-color: #EAF4F5;
+  display: flex; /* Use flexbox for content alignment */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  box-sizing: border-box; /* Include border and padding in sizing */
+ /* Ensure square containers */
+}
 
+
+.col-4 img{
+  width: 90%;
+  max-width: 100%; /* Scale image to fit */
+  max-height: auto; /* Prevent overflow */
+  object-fit: contain; /* Preserve image aspect ratio */
+  display: block; /* Avoid inline issues */
+  margin: 0 auto; /* Center the image */
 }
-.col-4 img {
-  width: 50%;
+
+.row {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  gap: 10px;
 }
+
 .title {
   text-align: center;
+  font-weight: 2000;
   margin: 0 auto 80px;
   position: relative;
   line-height: 60px;
-  color: #555;
-}
-.row {
-  display: flex;
-  align-items: center;
-  flex-wrap: flex;
-  justify-content: space-around;
-  padding-bottom: 30px;
-  /*border: 1px solid #4caf50;*/
+  color: #000000;
 }
 
 * {
@@ -74,38 +96,59 @@ header {
 
 /*------------------ POOOOOOOOOOOOSTERRRRRRRRRRRRRRRRRRRRRR---------------------------*/
 .poster {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  flex: 1;
+  background: #ffffff;
+  padding: 40px;
 }
-.poster img {
-  width: 100%;
-  height: 90%;
-  object-fit: cover; /* maeks the image not look distorted*/
-  display: block;
-  transform: scale(1);
-  border: 3px solid #4caf50;
 
+.poster-content {
+  background: #EAF4F5;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
+
+.image-box {
+  flex: 1;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  max-width: 100%;  
+  height: auto; 
+  max-height: 400px; 
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
 .poster-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #000;
-  font-weight: bold;
+  color: #EAF4F5;
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px;
 }
+
 .poster-text h4 {
-  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: normal;
+  text-align: center;
   font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  letter-spacing: 5px; 
+  line-height: 1.5; 
+  color: #000;
   margin: 0;
 }
 
-/* MNAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+/* NAVBAR */
 .containerthatcontains {
   display: flex;
   justify-content: space-between;
@@ -194,33 +237,154 @@ header::after {
 }
 
 
-/*--------------------options--------------*/
+/*-------------------- lab options--------------*/
 .lab-options {
   background: #ffffff;
 }
+
+.lab-options .col-4 {
+  padding-top: 100px;
+  margin: 10px 20px;
+  background: #EAF4F5;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(194, 66, 66, 0.1);
+  transition: transform 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: 3px;
+}
+
+
 .lab-options .title {
   padding-top: 30px;
 }
+
+.col-4:hover {
+  transform: translateY(-5px);
+}
+
 .btn-group {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
+
+.col-4 h4 {
+  font-size: medium;
+  font-style: italic;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
 .col-4 p {
   padding: 5px;
   padding-bottom: 20px;
 }
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 20px;
-  background-color: #d8bbe3;
-  color: #000000;
-  border-radius: 50%;
-  font-size: 20px;
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: transparent;
+}
+
+.quantity-minus {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 16px;
   font-weight: bold;
+  transition: 0.3s;
 }
-.btn:hover {
-  transform: rotate(90deg);
-  background-color: #9499db;
+
+.quantity-plus{
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.quantity-btn:hover {
+  background-color: #004154;
+  color: #fff;
+}
+
+.quantity-input {
+  text-align: center;
+  height: 30px;
+  width: 40px;
+  padding: 5px;
+  border: 1px solid #004154;
+  margin: 0 5px;
+  background: transparent;
+}
+
+/* Add-to-cart button style */
+
+.actions{
+  display: block;
+  width: 100%;
+  background-color: #004154;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addtocart {
+  background-color: #004154;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*----------sizes box for coat and boots---------*/
+
+.sideinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#orderForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for dropdown boxes */
+#orderForm select {
+  width: 140px; 
+  height: 50px; 
+  background-color: #fff; 
+  color: #000000; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+
+/* Styling for the dropdown arrow */
+#orderForm select::-ms-expand {
+  display: none; /
+}
+
+
+#orderForm select:focus {
+  outline: none; 
+  border-color: #004154; 
+}
+
