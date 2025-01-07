@@ -113,7 +113,7 @@
                               
                             <!--parent box-->
                               <div class="quantity">
-                                <button type="button" class="quantity-btn">-</button>
+                                <button type="button" class="quantity-minus">-</button>
                                   <input
                                     type="number"
                                     class="quantity-input"
@@ -121,18 +121,21 @@
                                     value="0"
                                     min="0"
                                   />
-                              <button type="button" class="quantity-btn">+</button>
+                              <button type="button" class="quantity-plus">+</button>
                           </div>
                           <br />
                            <!--add to cart button-->
+                           <div class="actions">
+                            <!--add to cart button-->
                             <button
                               type="button"
                               class="addtocart"
                               data-name="Lab Coat"
-                              data-price="RM70.00"
+                              data-price="70.0"
                             >
-                            Add to Cart
+                              Add to Cart
                             </button>
+                            </div>
                           </div>
 
                           <!-- THis is the box that contains the boots-->
@@ -162,7 +165,7 @@
 
                             <!--parent box-->
                             <div class="quantity">
-                              <button type="button" class="quantity-btn">-</button>
+                              <button type="button" class="quantity-minus">-</button>
                                 <input
                                   type="number"
                                   class="quantity-input"
@@ -170,10 +173,11 @@
                                   value="0"
                                   min="0"
                                 />
-                            <button type="button" class="quantity-btn">+</button>
+                            <button type="button" class="quantity-plus">+</button>
                         </div>
                         <br />
                          <!--add to cart button-->
+                         <div class="actions">
                           <button
                             type="button"
                             class="addtocart"
@@ -182,6 +186,8 @@
                           >
                           Add to Cart
                           </button>
+                         </div>
+                          
                           </div>
                         </div>
                     </div>
@@ -198,63 +204,17 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Handle quantity buttons for all items
-        document.querySelectorAll(".quantity").forEach((quantityDiv) => {
-          const minusButton = quantityDiv.querySelector(
-            ".quantity-btn:first-of-type"
-          );
-          const plusButton = quantityDiv.querySelector(
-            ".quantity-btn:last-of-type"
-          );
-          const quantityInput = quantityDiv.querySelector(".quantity-input");
+      function redirectToBuyNow() {
+        const productName = "Lab Coat";
+        const productPrice = 70.0;
+        const quantity = document.getElementById("quantity").value;
 
-          // Decrease quantity
-          minusButton.addEventListener("click", () => {
-            let currentValue = parseInt(quantityInput.value) || 0;
-            if (currentValue > 0) {
-              quantityInput.value = currentValue - 1;
-            }
-          });
-
-          // Increase quantity
-          plusButton.addEventListener("click", () => {
-            let currentValue = parseInt(quantityInput.value) || 0;
-            quantityInput.value = currentValue + 1;
-          });
-
-          // Validate input manually
-          quantityInput.addEventListener("input", () => {
-            let value = parseInt(quantityInput.value) || 0;
-            if (value < 0) value = 0; // Prevent negative values
-            quantityInput.value = value;
-          });
-        });
-
-        // Handle "Add to Cart" buttons
-        document.querySelectorAll(".addtocart").forEach((button) => {
-          button.addEventListener("click", () => {
-            const productName = button.getAttribute("data-name");
-            const productPrice = parseFloat(button.getAttribute("data-price"));
-            const quantityInput = button
-              .closest(".col-4")
-              .querySelector(".quantity-input");
-            const quantity = parseInt(quantityInput.value) || 0;
-
-            if (quantity > 0) {
-              console.log(
-                `Added to cart: ${productName}, Quantity: ${quantity}, Total Price: RM ${(
-                  productPrice * quantity
-                ).toFixed(2)}`
-              );
-              alert(`Added ${quantity} ${productName}(s) to cart!`);
-            } else {
-              alert("Please select a quantity greater than 0.");
-            }
-          });
-        });
-      });
+        window.location.href = `buynow.html?product=${encodeURIComponent(
+          productName
+        )}&price=${productPrice}&quantity=${quantity}`;
+      }
     </script>
             
 </body>

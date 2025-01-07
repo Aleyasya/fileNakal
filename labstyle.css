@@ -292,7 +292,16 @@ header::after {
   background: transparent;
 }
 
-.quantity-btn {
+.quantity-minus {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.quantity-plus{
   background: transparent;
   padding: 5px 15px;
   cursor: pointer;
@@ -317,7 +326,8 @@ header::after {
 }
 
 /* Add-to-cart button style */
-.addtocart {
+
+.actions{
   display: block;
   width: 100%;
   background-color: #004154;
@@ -330,9 +340,16 @@ header::after {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .addtocart {
   background-color: #004154;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 /*----------sizes box for coat and boots---------*/
