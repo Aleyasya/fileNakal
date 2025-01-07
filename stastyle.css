@@ -3,116 +3,215 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Jacques Francois", serif;
   font-weight: 400;
   font-style: normal;
   background-color: #fcfae2;
 }
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
+
+.small-container {
+  max-width: 1080px;
+  margin: auto;
 }
-/* ----------------------NAVBAR ----------------------*/
-.navbar {
-  display: flex;
-  align-self: center;
-  justify-content: space-between;
-  padding: 12px;
+
+.col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5;
+  text-align: center;
 }
-.navbar-left,
-.navbar-right {
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-}
-.navbar-left ul,
-.navbar-right ul {
-  display: flex;
-  list-style-type: none;
-}
-.navbar-left ul li,
-.navbar-right ul li {
-  margin: 0 15px;
-}
-.navbar-center img {
-  display: block;
-  margin: 0px auto;
-  padding: 0px 5px;
-}
-.navbar-center h1 {
-  align-items: center;
-  font-size: 20px;
-  margin-top: 0px;
-  padding-bottom: 35px;
-}
-a {
-  text-decoration: none;
-  color: #555;
-  font-size: 20px;
-}
-a:hover {
-  color: rgb(179, 50, 211);
-}
-/* POSTER */
-.poster {
-  position: relative;
+
+.col-4 img {
   width: 100%;
-  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #555;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gotu", serif;
+  font-weight: bold;
+  background-color: #eaf4f5;
+  color: #333;
+}
+
+.bar {
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  background: #004154;
+}
+
+header {
+  color: #f30000;
+  background-color: #fff;
+}
+
+/*------------------NAV BAR-------------------*/
+.containerthatcontains {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Logo styles */
+.containerthatcontains .logo {
+  flex-shrink: 0;
+}
+
+/* Links styles */
+.containerthatcontains .links {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  gap: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.poster .row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  padding: 70px;
-  margin: 70px;
-}
-.tilted-box {
-  position: absolute;
-  width: 65%;
-  height: 65%;
-  background-color: #e6e6fa;
-  transform: rotate(-8deg);
-  z-index: 1;
-  top: 5%;
-  left: -5%;
-}
-.poster img {
-  width: 130%;
-  height: 300px;
-  max-width: 1500px;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  z-index: 2;
-}
-.poster-text {
-  text-align: center;
-  margin-top: 20px;
-}
-.title {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-weight: 700;
+
+.containerthatcontains li a {
+  font-family: "Gotu", serif;
   color: #333;
-  z-index: 3;
+  text-decoration: none;
+  font-size: 33px;
+  transition: color 0.3s;
 }
-.poster p {
-  padding-top: 50px;
-  margin-top: 50px;
-  font-size: 1.2rem;
-  color: #666;
+
+.containerthatcontains .links i {
+  color: grey; /* color of the bag*/
 }
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #eaf4f5;
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-container input[type="text"] {
+  text-align: center;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background: #eaf4f5;
+  color: black;
+  border-radius: 30px;
+}
+
+.search-container button {
+  background: #eaf4f5;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 17px;
+}
+
+.search-container button i {
+  color: black; /* Ensures icon is visible */
+}
+
+.search-container button:hover {
+  background: #008c9e;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: black;
+}
+
+header::after {
+  padding-top: 5px;
+  content: "";
+  background: #004154;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+/* -------------------------- POSTER--------------------------------------*/
+.poster {
+  flex: 1;
+  background: #ffffff;
+  padding: 40px;
+}
+
+.image-box {
+  flex: 1;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  max-width: 400%;  
+  height: auto; 
+  max-height: 400px; 
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.poster-content {
+  background: #EAF4F5;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.poster-text {
+  color: #EAF4F5;
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px;
+}
+
+.poster-text h4 {
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: 10px; 
+  line-height: 2; 
+  color: #000;
+  margin: 0;
+}
+
+
 /*---------------------STATIONARY OPTIONS -----------------------------*/
 .small-container {
   max-width: 1080px;
@@ -120,16 +219,11 @@ a:hover {
   padding-left: 25px;
   padding-right: 25px;
 }
-.row2 {
-  display: flex;
-  align-items: center;
-  flex-wrap: flex;
-  justify-content: space-around;
-  padding-bottom: 50px;
-}
+
 .stationary-options {
-  background: #fcfae2;
+  background: #ffffff;
 }
+
 .stationary-options .title {
   padding-top: 20px;
   font-family: "Jacques Francois", serif;
@@ -141,6 +235,7 @@ h4 {
   color: #555;
   font-weight: normal;
   text-align: center;
+
 }
 .col-4 {
   flex-basis: 25%;
@@ -150,11 +245,13 @@ h4 {
   transition: transform 0.5;
   text-align: center;
 }
+
 .col-4 p {
   display: flex;
   justify-content: center;
   margin: 10px 0;
 }
+
 .stationary-options .col-4 {
   margin: 0 20px;
   background: #dce3e4;
@@ -162,19 +259,76 @@ h4 {
   box-shadow: 0 2px 10px rgba(194, 66, 66, 0.1);
   transition: transform 0.5s;
 }
+
 .stationary-options .col-4 .img {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
 }
+
 .rating {
   display: flex;
   justify-content: center;
   margin: 10px 0;
 }
+
 .rating .fa {
   align-content: center;
-  color: rgb(255, 255, 101);
+  color: rgb(255,180,41);
 }
+
 .col-4:hover {
   transform: translateY(-5px);
+}
+
+/*-------------addition buttons-----------*/
+/*--------number of stationary-------------*/
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: transparent;
+}
+
+.quantity-btn {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.quantity-btn:hover {
+  background-color: #004154;
+  color: #fff;
+}
+
+.quantity-input {
+  text-align: center;
+  height: 30px;
+  width: 40px;
+  padding: 5px;
+  border: 1px solid #004154;
+  margin: 0 5px;
+  background: transparent;
+}
+
+/* Add-to-cart button style */
+.addtocart {
+  display: block;
+  width: 100%;
+  background-color: #004154;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addtocart {
+  background-color: #004154;
 }
