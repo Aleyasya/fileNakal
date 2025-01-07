@@ -78,7 +78,7 @@ header {
   background-color: #fff;
 }
 
-/* MNAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+/*------------------NAV BAR-------------------*/
 .containerthatcontains {
   display: flex;
   justify-content: space-between;
@@ -169,7 +169,7 @@ header::after {
 /* -------------------------- POSTER--------------------------------------*/
 
 .poster {
-  background: radial-gradient(#edecb2, #d4d8ea, #9499db);
+  background: white;
   position: relative;
   width: 100vw;
   height: 120vh;
@@ -203,7 +203,7 @@ header::after {
 /*---------------------------Drinking options------------------------*/
 
 .drinking-options {
-  background: #fcfae2;
+  background: #ffffff;
 }
 
 .drinking-options .title {
@@ -306,3 +306,5 @@ h4 {
 .addtocart {
   background-color: #004154;
 }
+
+

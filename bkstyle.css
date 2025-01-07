@@ -61,7 +61,6 @@ body {
 body {
   font-family: "Gotu", serif;
   font-weight: bold;
-  background-color: #eaf4f5;
   color: #333;
 }
 
@@ -237,6 +236,7 @@ header::after {
 /*---------------------------breakfast options------------------------*/
 .breakfast-options {
   background: #ffffff;
+  border: 3px solid #4caf50;
 }
 .breakfast-options .title {
   padding-top: 20px;

@@ -27,49 +27,66 @@
     <!--FOOTER-->
   </head>
   <body>
-    <div class="header">
-        <div class="container">
-          <div class="navbar">
-              <!-- LEFT NAVBAR -->
-               <div class="navbar-left">
-                  <ul>
-                      <li><a href="">About</a></li>
-                      <li><a href="">Services</a></li>
-                      <li><a href="shop.html">Shop</a></li></nav>
-                    </ul>
-               </div>
-               <!-- RIGHT NAVBAR-->
-               <div class="navbar-center">
-                  <div class="logo-icon">
-                    <a href="index.html"><img src="images/logo.png" alt="" width="130px" height="120px"></a>
-                      <h1>O n e S t o p C e n t r e</h1>
-                  </div>
-               </div>
-               <div class="navbar-right">
-                  <ul>
-                      <li><a href="">My Account</a></li>
-                  </ul>
-                  <img src="images/cart.png" alt="" width="30px" height="30px">
-               </div>
-          </div>
-        </di
-        <!---------------POSTER -------------------------->
+    <!---------------------- NAVBAR ------------------------->
+    <div class="bar"></div>
+    <header>
+      <div class="containerthatcontains">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="Oscent_Pictures/logo-placeholder.png"
+              alt="Logo"
+              class="logo"
+              width="120"
+            />
+          </a>
+        </div>
+        <div class="links">
+          <li><a href="#">About</a></li>
+          <li><a href="servicepage.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="login.html">My Account</a></li>
+          <li>
+            <a href="cart1.html">
+              <i class="fas fa-shopping-bag"></i>
+            </a>
+          </li>
+        </div>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="S E A R C H" name="search" />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+        <!---------------POSTER AREA -------------------------->
+       
         <div class="poster">
-            <div class="row">
-              <div class="tilted-box"></div>
-              <img src="images/stationary.png" />
-    
-                
-                <p>Stock Up On All Your Stationery Needs, Right Here!</p>
-            </div>
-          </div>
+            <div class="poster-content">
+                <div class="image-box">
+                <img src="images/stationery.png" />
+                </div>
+              <div class="poster-text">
+                <div class="poster-content">
+                  <h4>SCRIBBLE,<br>IDEAS,<br>CREATE</h4>
+                </div>
+              </div>
+        </div>
+        </div>
+          <div class="bar"></div>
+
           <!----------------------- STATIONARY OPTIONS --------------------->
           <div class="stationary-options">
             <div class="small-container">
-                <div class="row2">
+              <h2 class="title">Stock Up On All Your Stationery Needs, Right Here!</h2>
+                <div class="row">
                     <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
+                        <img src="images/paper.png" alt="">
+                        <h4>Foolscap Paper</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -77,11 +94,35 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                           </div>
-                          <p>RM 3.00</p>
+                          <p>RM 4.90</p>
+                          <!--parent box-->
+                          <!--parent box-->
+                       <div class="quantity">
+                      <button type="button" class="quantity-btn">-</button>
+                      <input
+                        type="number"
+                        class="quantity-input"
+                        name="quantity"
+                        value="0"
+                        min="0"
+                      />
+                      <button type="button" class="quantity-btn">+</button>
                     </div>
+                    <br />
+                    <!--add to cart button-->
+                    <button
+                      type="button"
+                      class="addtocart"
+                      data-name="Foolscap Paper"
+                      data-price="4.90"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+        
                     <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
+                        <img src="images/pen.png" alt="">
+                        <h4>Ball Pen Set</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -89,11 +130,35 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                           </div>
-                          <p>RM 3.00</p>
-                    </div>
+                          <p>RM 3.20</p>
+                          <!--parent box-->
+                          <!--parent box-->
+                          <div class="quantity">
+                            <button type="button" class="quantity-btn">-</button>
+                            <input
+                              type="number"
+                              class="quantity-input"
+                              name="quantity"
+                              value="0"
+                              min="0"
+                            />
+                            <button type="button" class="quantity-btn">+</button>
+                          </div>
+                          <br />
+                          <!--add to cart button-->
+                          <button
+                            type="button"
+                            class="addtocart"
+                            data-name="Ball Pen Set"
+                            data-price="3.20"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                    
                     <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
+                        <img src="images/eraser.png" alt="">
+                        <h4>Eraser</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -101,11 +166,38 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                           </div>
-                          <p>RM 3.00</p>
+                          <p>RM 0.70</p>
+                          <!--parent box-->
+                          <!--parent box-->
+                          <div class="quantity">
+                      <button type="button" class="quantity-btn">-</button>
+                      <input
+                        type="number"
+                        class="quantity-input"
+                        name="quantity"
+                        value="0"
+                        min="0"
+                      />
+                      <button type="button" class="quantity-btn">+</button>
                     </div>
+                    <br />
+                    <!--add to cart button-->
+                    <button
+                      type="button"
+                      class="addtocart"
+                      data-name="Eraser"
+                      data-price="0.70"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                    </div>
+                    
+
+                <div class="row">
                     <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
+                        <img src="images/ruler.png" alt="">
+                        <h4>Ruler</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -113,12 +205,35 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                           </div>
-                          <p>RM 3.00</p>
-                    </div>
-                </div><div class="row2">
+                          <p>RM 0.70</p>
+                          <!--parent box-->
+                          <!--parent box-->
+                          <div class="quantity">
+                            <button type="button" class="quantity-btn">-</button>
+                            <input
+                              type="number"
+                              class="quantity-input"
+                              name="quantity"
+                              value="0"
+                              min="0"
+                            />
+                            <button type="button" class="quantity-btn">+</button>
+                          </div>
+                          <br />
+                          <!--add to cart button-->
+                          <button
+                            type="button"
+                            class="addtocart"
+                            data-name="Ruler"
+                            data-price="0.70"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+
                     <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
+                        <img src="images/highlighter.png" alt="">
+                        <h4>Highlighter</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -126,11 +241,35 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                           </div>
-                          <p>RM 3.00</p>
-                    </div>
+                          <p>RM 1.60</p>
+                          <!--parent box-->
+                          <!--parent box-->
+                          <div class="quantity">
+                            <button type="button" class="quantity-btn">-</button>
+                            <input
+                              type="number"
+                              class="quantity-input"
+                              name="quantity"
+                              value="0"
+                              min="0"
+                            />
+                            <button type="button" class="quantity-btn">+</button>
+                          </div>
+                          <br />
+                          <!--add to cart button-->
+                          <button
+                            type="button"
+                            class="addtocart"
+                            data-name="Highlighter"
+                            data-price="1.60"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+           
                     <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
+                        <img src="images/sellotape.png" alt="">
+                        <h4>Sellotape</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -138,82 +277,32 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                           </div>
-                          <p>RM 3.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                          <p>RM 2</p>
+                          <!--parent box-->
+                          <!--parent box-->
+                          <div class="quantity">
+                            <button type="button" class="quantity-btn">-</button>
+                            <input
+                              type="number"
+                              class="quantity-input"
+                              name="quantity"
+                              value="0"
+                              min="0"
+                            />
+                            <button type="button" class="quantity-btn">+</button>
                           </div>
-                          <p>RM 3.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                          <p>RM 3.00</p>
-                    </div>
-                </div>
-                <div class="row2">
-                    <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                          <p>RM 3.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                          <p>RM 3.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                          <p>RM 3.00</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/pen-removebg-preview.png" alt="">
-                        <h4>Gel Pen</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                          <p>RM 3.00</p>
-                    </div>
+                          <br />
+                          <!--add to cart button-->
+                          <button
+                            type="button"
+                            class="addtocart"
+                            data-name="Sellotape"
+                            data-price="2.00"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                    </div>  
                 </div>
             </div>
           </div>
