@@ -172,7 +172,7 @@ header::after {
 }
 
 .poster-content {
-  background: #dce3e4;
+  background:#EAF4F5 ;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
