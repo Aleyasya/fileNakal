@@ -307,6 +307,89 @@
             </div>
           </div>
         </body>
+
+        <!---------------------- SCRIPTS ------------------------->
+    <script src="janji.js"></script>
+    <script src="ProDetails.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Handle quantity buttons for all items
+        document.querySelectorAll(".quantity").forEach((quantityDiv) => {
+          const minusButton = quantityDiv.querySelector(".quantity-btn:first-of-type");
+          const plusButton = quantityDiv.querySelector(".quantity-btn:last-of-type");
+          const quantityInput = quantityDiv.querySelector(".quantity-input");
+    
+          // Decrease quantity
+          minusButton.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 0;
+            if (currentValue > 0) {
+              quantityInput.value = currentValue - 1;
+            }
+          });
+    
+          // Increase quantity
+          plusButton.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value) || 0;
+            quantityInput.value = currentValue + 1;
+          });
+    
+          // Validate input manually
+          quantityInput.addEventListener("input", () => {
+            let value = parseInt(quantityInput.value) || 0;
+            if (value < 0) value = 0; // Prevent negative values
+            quantityInput.value = value;
+          });
+        });
+    
+        // Handle "Add to Cart" buttons
+        document.querySelectorAll(".addtocart").forEach((button) => {
+          button.addEventListener("click", () => {
+            const productName = button.getAttribute("data-name");
+            const productPrice = parseFloat(button.getAttribute("data-price"));
+            const quantityInput = button.closest(".col-4").querySelector(".quantity-input");
+            const quantity = parseInt(quantityInput.value) || 0;
+    
+            if (quantity > 0) {
+              // Get existing cart items from localStorage
+              let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    
+              // Check if the item already exists in the cart
+              const existingItemIndex = cartItems.findIndex(
+                (item) => item.name === productName
+              );
+    
+              if (existingItemIndex > -1) {
+                // Update quantity if item exists
+                cartItems[existingItemIndex].quantity += quantity;
+              } else {
+                // Add new item to the cart
+                cartItems.push({
+                  name: productName,
+                  price: productPrice,
+                  quantity: quantity,
+                });
+              }
+    
+              // Save updated cart back to localStorage
+              localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    
+              alert(`Added ${quantity} ${productName}(s) to cart!`);
+            } else {
+              alert("Please select a quantity greater than 0.");
+            }
+          });
+        });
+      });
+    </script>
+    
         <!-------------FOOOTER--------------->
   <footer>
     <hr />

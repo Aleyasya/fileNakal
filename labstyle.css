@@ -292,7 +292,7 @@ header::after {
   background: transparent;
 }
 
-.quantity-minus {
+.quantity-btn {
   background: transparent;
   padding: 5px 15px;
   cursor: pointer;
@@ -301,14 +301,6 @@ header::after {
   transition: 0.3s;
 }
 
-.quantity-plus{
-  background: transparent;
-  padding: 5px 15px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
-}
 
 .quantity-btn:hover {
   background-color: #004154;
@@ -327,20 +319,10 @@ header::after {
 
 /* Add-to-cart button style */
 
-.actions{
+
+.addtocart {
   display: block;
   width: 100%;
-  background-color: #004154;
-  color: #ffffff;
-  text-align: center;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.addtocart {
   background-color: #004154;
   color: #ffffff;
   text-align: center;

@@ -110,7 +110,7 @@
             <button
               type="button"
               class="addtocart"
-              data-name="waterbottle"
+              data-name="Mineral Water"
               data-price="1.00"
             >
               Add to Cart
@@ -146,8 +146,8 @@
             <button
               type="button"
               class="addtocart"
-              data-name="waterbottle"
-              data-price="1.00"
+              data-name="Coffee"
+              data-price="3.20"
             >
               Add to Cart
             </button>
@@ -182,8 +182,8 @@
             <button
               type="button"
               class="addtocart"
-              data-name="waterbottle"
-              data-price="1.00"
+              data-name="Chrysanthemum Tea"
+              data-price="1.50"
             >
               Add to Cart
             </button>
@@ -223,8 +223,8 @@
             <button
               type="button"
               class="addtocart"
-              data-name="waterbottle"
-              data-price="1.00"
+              data-name="Vida C"
+              data-price="3.00"
             >
               Add to Cart
             </button>
@@ -259,7 +259,7 @@
             <button
               type="button"
               class="addtocart"
-              data-name="waterbottle"
+              data-name="Milk"
               data-price="1.00"
             >
               Add to Cart
@@ -295,8 +295,8 @@
             <button
               type="button"
               class="addtocart"
-              data-name="waterbottle"
-              data-price="1.00"
+              data-name="Grass Jelly"
+              data-price="2.50"
             >
               Add to Cart
             </button>
@@ -438,11 +438,30 @@
             const quantity = parseInt(quantityInput.value) || 0;
 
             if (quantity > 0) {
-              console.log(
-                `Added to cart: ${productName}, Quantity: ${quantity}, Total Price: RM ${(
-                  productPrice * quantity
-                ).toFixed(2)}`
+              // Get existing cart items from localStorage
+              let cartItems =
+                JSON.parse(localStorage.getItem("cartItems")) || [];
+
+              // Check if the item already exists in the cart
+              const existingItemIndex = cartItems.findIndex(
+                (item) => item.name === productName
               );
+
+              if (existingItemIndex > -1) {
+                // Update quantity if item exists
+                cartItems[existingItemIndex].quantity += quantity;
+              } else {
+                // Add new item to the cart
+                cartItems.push({
+                  name: productName,
+                  price: productPrice,
+                  quantity: quantity,
+                });
+              }
+
+              // Save updated cart back to localStorage
+              localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
               alert(`Added ${quantity} ${productName}(s) to cart!`);
             } else {
               alert("Please select a quantity greater than 0.");
