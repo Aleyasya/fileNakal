@@ -131,7 +131,7 @@ header::after {
 }
 
 .shop-options {
-  background: #fcfae2;
+  background: #ffffff;
   padding: 50px;
 }
 
@@ -149,8 +149,13 @@ header::after {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
+  text-shadow: 
+  -1px -1px 0 black,  /* Top-left */
+   1px -1px 0 black,  /* Top-right */
+  -1px  1px 0 black,  /* Bottom-left */
+   1px  1px 0 black;  /* Bottom-right */
 }
 
 /* -----------------------second rowww-------------------------------*/
