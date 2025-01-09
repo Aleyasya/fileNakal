@@ -60,6 +60,7 @@ body {
 }
 
 .title {
+  padding-top: 30px;
   text-align: center;
   font-weight: 2000;
   margin: 0 auto 80px;
@@ -255,10 +256,6 @@ header::after {
   border: 3px;
 }
 
-
-.lab-options .title {
-  padding-top: 30px;
-}
 
 .col-4:hover {
   transform: translateY(-5px);

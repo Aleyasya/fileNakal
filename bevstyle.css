@@ -37,6 +37,7 @@ body {
 }
 
 .title {
+  padding-top: 30px;
   text-align: center;
   font-weight: 2000;
   margin: 0 auto 80px;
@@ -51,7 +52,6 @@ body {
   flex-wrap: flex;
   justify-content: space-around;
   padding-bottom: 30px;
-  border: 1px solid #4caf50;
 }
 
 * {
@@ -210,12 +210,15 @@ header::after {
 }
 
 .poster-text h4 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: normal;
+  text-align: center;
+  font-weight: bolder;
   font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  letter-spacing: 5px; 
+  line-height: 1.5; 
+  color: #000;
   margin: 0;
-  color: #000000;
 }
 
 /*---------------------------Drinking options------------------------*/
@@ -224,13 +227,6 @@ header::after {
   background: #ffffff;
 }
 
-.drinking-options .title {
-  padding-top: 20px;
-  font-family: "Jacques Francois", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-}
 
 h4 {
   color: #555;
@@ -252,7 +248,6 @@ h4 {
   transition: transform 0.5s;
   padding-left: 10px;
   padding-right: 10px;
-  border: 3px solid red;
 }
 
 .drinking-options .col-4 .img {

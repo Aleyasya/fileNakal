@@ -30,11 +30,13 @@ body {
 }
 
 .title {
+  padding-top: 30px;
   text-align: center;
+  font-weight: 2000;
   margin: 0 auto 80px;
   position: relative;
   line-height: 60px;
-  color: #555;
+  color: #000000;
 }
 
 .row {
@@ -203,10 +205,13 @@ header::after {
 }
 
 .poster-text h4 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: normal;
+  text-align: center;
+  font-weight: bolder;
   font-size: 3rem;
-  letter-spacing: 10px; 
-  line-height: 2; 
+  letter-spacing: 5px; 
+  line-height: 1.5; 
   color: #000;
   margin: 0;
 }
@@ -224,13 +229,6 @@ header::after {
   background: #ffffff;
 }
 
-.stationary-options .title {
-  padding-top: 20px;
-  font-family: "Jacques Francois", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-}
 h4 {
   color: #555;
   font-weight: normal;
