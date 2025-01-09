@@ -11,13 +11,6 @@ body {
   color: #333;
 }
 
-/* Navbar Styling */
-
-header {
-  background-color: #fff;
-  padding: 5px 20px;
-}
-
 .bar {
   padding: 0;
   height: 40px;
@@ -25,84 +18,85 @@ header {
   background: #004154;
 }
 
-.navbar {
+/* NAVBAR */
+.containerthatcontains {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
 }
 
-/* Left Navbar */
 
-.navbar-left ul {
-  margin: 20px;
+/* Logo styles */
+.containerthatcontains .logo {
+  flex-shrink: 0;
+}
+
+/* Links styles */
+.containerthatcontains .links {
   display: flex;
-  list-style: none;
-  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-left ul li {
-  margin-right: 20px;
-}
-
-.navbar-left ul li a {
+.containerthatcontains li a {
   font-family: "Gotu", serif;
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 33px;
   transition: color 0.3s;
 }
 
-.navbar-left ul li a:hover {
-  color: #00bcd4;
+.containerthatcontains .links i {
+  color: grey; /* color of the bag*/
 }
 
-.navbar-left .search-container {
-  background: #eaf4f5; /*container background color */
-  float: right;
+/* Search container styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #eaf4f5;
+  border-radius: 30px;
+  padding: 5px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-container input[type="text"] {
+  text-align: center;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background: #eaf4f5;
+  color: black;
   border-radius: 30px;
 }
 
-.navbar-left input[type="text"] {
-  text-align: center;
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  outline: none; /* Removes outline when focused */
-  background: #eaf4f5; /* Matches the container background */
-  color: black; /* Ensure text is visible */
-  border-radius: 30px; /* Optional: matches the container */
-}
-
-.navbar-left .search-container button {
-  background: #eaf4f5; /* Matches the container background */
+.search-container button {
+  background: #eaf4f5;
   border: none;
   cursor: pointer;
   padding: 6px;
-  color: white; /* Ensures icon is visible */
   font-size: 17px;
 }
 
-.navbar-left .search-container button i {
+.search-container button i {
   color: black; /* Ensures icon is visible */
 }
 
-.navbar-left .search-container button:hover {
-  background: #008c9e;
+.search-container button:hover {
+  background: #ffffff;
 }
 
-.navbar-left input[type="text"]::placeholder {
+.search-container input[type="text"]::placeholder {
   color: black;
 }
 
-/* Center Navbar */
-.navbar-center {
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto; /*GAPO TAK CENTER*/
-}
-
-.navbar-center::after {
-  margin-top: 5px;
+header::after {
   padding-top: 5px;
   content: "";
   background: #004154;
@@ -111,56 +105,6 @@ header {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-}
-
-.tagline {
-  color: #000;
-  font-size: 18px;
-  margin-top: 8px;
-  font-weight: 500;
-}
-
-/* Right Navbar */
-.navbar-right {
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.navbar-right ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  margin-left: auto;
-}
-
-.navbar-right ul li {
-  padding: 10px;
-}
-
-.navbar-right ul li a {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.navbar-right ul li a:hover {
-  color: #00bcd4;
-}
-
-.cart-icon {
-  font-size: 18px;
-  color: #000;
-  cursor: pointer;
-}
-
-.cart-icon:hover {
-  color: #00bcd4;
 }
 
 /* ------------------------landing page ahahahah------------*/
@@ -247,6 +191,10 @@ header {
   font-size: 16px;
   text-align: center;
   transition: background 0.5s;
+}
+
+.col-2 img{
+  padding-top: 50px;
 }
 
 /* Responsive Design */
