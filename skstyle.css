@@ -43,12 +43,16 @@ body {
 .col-4 img {
   width: 50%;
 }
+
 .title {
   text-align: center;
+  font-size: 400px;
+  font-weight: 2000;
   margin: 0 auto 80px;
   position: relative;
   line-height: 60px;
-  color: #555;
+  color: #000000;
+  border: 3px solid blue;
 }
 .row {
   display: flex;
