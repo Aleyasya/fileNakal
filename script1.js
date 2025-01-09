@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const users = JSON.parse(localStorage.getItem("users")) || {};
 
     if (!users[email]) {
+      //log in verification
       alert("No user found with this email. Please sign up.");
       window.location.href = "signup.html";
       return;
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (users[email].password === hashPassword(password)) {
       alert("Login successful! Redirecting to home page.");
-      window.location.href = "home.html";
+      window.location.href = "index.html"; // redirects to home page
     } else {
       alert("Invalid email or password.");
     }
