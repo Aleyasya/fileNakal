@@ -131,12 +131,11 @@ header::after {
 }
 
 .column-2 {
-  transform: translateY(-90%);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 100px;
   max-width: 80%;
   margin: 0 auto;
 }

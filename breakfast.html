@@ -59,7 +59,7 @@
           </li>
         </div>
         <div class="search-container">
-          <form action="/action_page.php">
+          <form>
             <input type="text" placeholder="S E A R C H" name="search" />
             <button type="submit">
               <i class="fa fa-search"></i>
@@ -391,6 +391,71 @@
           }
         });
       });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the search form and prevent its default submission
+      const searchForm = document.querySelector(".search-container form");
+      const searchInput = document.querySelector(
+        '.search-container input[name="search"]'
+      );
+      const searchButton = document.querySelector(".search-container button");
+
+      searchForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // This prevents the form from submitting
+        performSearch();
+      });
+
+      searchButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        performSearch();
+      });
+
+      searchInput.addEventListener("input", performSearch);
+
+      function performSearch() {
+        // Get the search query and convert to lowercase
+        const query = searchInput.value.toLowerCase().trim();
+
+        // Get all product containers
+        const products = document.querySelectorAll(".col-4");
+
+        // Loop through each product
+        products.forEach((product) => {
+          // Get the product name from the h4 element
+          const productName = product
+            .querySelector("h4")
+            .innerText.toLowerCase();
+
+          // Show/hide products based on search match
+          if (productName.includes(query)) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+
+        // Update layout if no results found
+        const visibleProducts = Array.from(products).filter(
+          (p) => p.style.display !== "none"
+        );
+        const noResultsMessage = document.getElementById("no-results-message");
+
+        if (visibleProducts.length === 0 && query !== "") {
+          if (!noResultsMessage) {
+            const message = document.createElement("div");
+            message.id = "no-results-message";
+            message.style.textAlign = "center";
+            message.style.padding = "20px";
+            message.innerHTML =
+              "No breakfast options found matching your search.";
+            document.querySelector(".small-container").appendChild(message);
+          }
+        } else if (noResultsMessage) {
+          noResultsMessage.remove();
+        }
+      }
     });
   </script>
 
