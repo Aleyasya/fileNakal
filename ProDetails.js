@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (quantity > 0) {
       const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      window.location.href = `buynow.html?product=${encodeURIComponent(
+      window.location.href = `cart1.html?product=${encodeURIComponent(
         productName
       )}&price=${productPrice}&quantity=${quantity}&cartItems=${encodeURIComponent(
         JSON.stringify(cartItems)
