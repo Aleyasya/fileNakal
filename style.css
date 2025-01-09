@@ -7,7 +7,7 @@
 body {
   font-family: "Gotu", serif;
   font-weight: bold;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   color: #333;
 }
 
@@ -19,6 +19,13 @@ body {
 }
 
 /* NAVBAR */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .containerthatcontains {
   display: flex;
   justify-content: space-between;
@@ -109,11 +116,7 @@ header::after {
 
 /* ------------------------landing page ahahahah------------*/
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .col-2 {
   flex-basis: 45%;
@@ -125,6 +128,7 @@ header::after {
   line-height: 1.5;
   font-family: "Poltawski Nowy", serif;
   text-align: left;
+  padding-top: 45px;
   padding-left: 50px;
   position: relative; /* yang ni je penting */
 }
@@ -140,7 +144,9 @@ header::after {
 }
 
 .col-2 p {
+  display: block;
   align-items: center;
+  text-align: center;
   padding-left: 55px;
   font-size: 20px;
   line-height: 1.8;
@@ -161,21 +167,15 @@ header::after {
 }
 
 .col-2 img {
-  max-width: 100%;
+  padding-top: 30px;
+  padding-right: 100px;
+  max-width: 110%;
+  width: auto;
   height: auto;
-  border: 5px solid white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.estNbutton {
-  border: 3px solid #73ad21;
-  font-size: 16px;
-  margin-top: 20px;
-  position: absolute; /* yang ni je penting */
-  left: 200px;
 }
 
 .est {
+  display: block;
   text-align: center;
   font-size: 16px;
   margin-top: 20px;
@@ -183,19 +183,19 @@ header::after {
 
 .btn {
   display: inline-block;
-  background: #b6d3e3;
+  display: left;
   color: black;
-  padding: 8px 30px;
-  margin: 10px 0;
+  background: #eaf4f5;
+  padding: 7px 55px;
+  margin: 5px 0;
   border-radius: 30px;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   transition: background 0.5s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.col-2 img{
-  padding-top: 50px;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
