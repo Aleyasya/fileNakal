@@ -284,6 +284,10 @@ header::after {
   padding-bottom: 20px;
 }
 
+#Size{
+  text-align: center;
+}
+
 .quantity {
   display: flex;
   justify-content: center;
