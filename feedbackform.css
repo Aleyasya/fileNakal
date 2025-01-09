@@ -1,0 +1,90 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #d7d4cf;
+}
+
+.feedback-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-form h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+}
+
+.feedback-form .form-group {
+  margin-bottom: 20px;
+}
+
+.feedback-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+.feedback-form .form-group input,
+.feedback-form .form-group textarea,
+.feedback-form .form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.feedback-form .form-group input:focus,
+.feedback-form .form-group textarea:focus,
+.feedback-form .form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.feedback-form button {
+  background-color: #004154;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #e1d4c1;
+}
+
+#feedbackMessage {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #28a745;
+}

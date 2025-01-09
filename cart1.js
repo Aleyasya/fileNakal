@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkoutButton?.addEventListener("click", () => {
     if (confirm("Proceed to checkout?")) {
       localStorage.clear(); // Clear the cart
-      window.location.href = "purchasepay.html";
+      window.location.href = "money.html";
     }
   });
 
