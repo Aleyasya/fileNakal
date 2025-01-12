@@ -151,11 +151,8 @@ header::after {
   color: white;
   font-size: 40px;
   font-weight: bold;
-  text-shadow: 
-  -1px -1px 0 black,  /* Top-left */
-   1px -1px 0 black,  /* Top-right */
-  -1px  1px 0 black,  /* Bottom-left */
-   1px  1px 0 black;  /* Bottom-right */
+  text-shadow: -1px -1px 0 black, /* Top-left */ 1px -1px 0 black,
+    /* Top-right */ -1px 1px 0 black, /* Bottom-left */ 1px 1px 0 black; /* Bottom-right */
 }
 
 /* -----------------------second rowww-------------------------------*/
@@ -192,7 +189,6 @@ header::after {
 .footer-col-1 {
   flex-basis: 30%;
 }
-
 
 .footer-col-2 img {
   width: 180px;
@@ -234,19 +230,70 @@ header::after {
 
 /* media query for menu*/
 
-@media only screen and (max-width: 800) {
-  nav ul {
+/* Responsive Design */
+@media (max-width: 768px) {
+  hamburger {
+    display: flex;
     position: absolute;
-    top: 70px;
-    left: 0;
-    background: #333;
-    width: 100%;
+    top: 15px;
+    right: 15px;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
   }
 
-  nav ul li {
-    display: block;
-    margin-right: 50px;
-    margin-top: 10px;
-    margin-bottom: 50px;
+  .hamburger span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  .links li {
+    margin: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .containerthatcontains {
+    flex-direction: column;
+  }
+  .landing-page {
+    align-items: center;
+    justify-content: center;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .col-4 {
+    flex-basis: 25%;
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-left,
+  .navbar-right {
+    margin-bottom: 15px;
+  }
+
+  .navbar-left ul,
+  .navbar-right ul {
+    justify-content: center;
   }
 }
