@@ -4,28 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oscent | Lab Attire</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="labstyle.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Jacques+Francois&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
-    />
-    <!--FOOTER-->
     <link rel="stylesheet" href="footer.css" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cedarville+Cursive&family=Didact+Gothic&family=Eater&family=Fresca&family=Gotu&family=Jacques+Francois&family=Julius+Sans+One&family=Parkinsans:wght@300..800&family=Playwrite+NL+Guides&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
-    <!--FOOTER-->
   </head>
+
+
   <body>
     <!---------------------- NAVBAR ------------------------->
     <div class="bar"></div>
@@ -63,7 +60,7 @@
       </div>
     </header>     
                 
-          <!------------- POSTER ----------------->
+          <!---------------------- POSTER ------------------------->
           <div class="poster">
             <div class="poster-content">
               <div class="image-box">
@@ -79,21 +76,20 @@
           <div class="bar"></div>
 
 
-            <!------------- LAB OPTIONS --------------->
+            <!---------------------- LAB OPTIONS ------------------------->
             <div class="lab-options">
                 <div class="small-container">
                     <h2 class="title">From Head to Toe, Our Lab Coats and Boots Have You Covered!</h2>
                       <div class="row">
                         
-                          <!-- THis is the box that contains the coat-->
+                          <!------- BOX CONTAINING THE COAT ------->
                             <div class="col-4">
                             <img src="images/labattire.png" alt="">
                             <h4>Lab Coat</h4>
                             <p>RM 70</p>
 
-                            <!-----------SIZES OPTIONS------------->
-
-                            <div class="sideinfo"> <!--------penting-->
+                            <!----------- SIZES OPTION ------------->
+                            <div class="sideinfo">
                               <form id="orderForm">
                               <div class="Size">
                                 <label for="Size"></label>
@@ -111,7 +107,7 @@
                               <br>
                               </form>
                               
-                            <!--parent box-->
+                            <!----------- PARENT-BOX ------------->
                             <div class="quantity">
                               <button type="button" class="quantity-btn">-</button>
                                 <input
@@ -124,7 +120,8 @@
                             <button type="button" class="quantity-btn">+</button>
                         </div>
                         <br />
-                         <!--add to cart button-->
+
+                         <!----------- ADD TO CART BUTTON ------------->
                           <button
                             type="button"
                             class="addtocart"
@@ -135,15 +132,14 @@
                           </button>
                         </div>
                         
-
-                          <!-- THis is the box that contains the boots-->
+                          <!------- BOX CONTAINING THE BOOTS ------->
                               <div class="col-4">
                             <img src="images/boots.png" alt="">
                             <h4>Boots</h4>
                             <p>RM 36</p>
 
-                            <!-----------SIZES OPTIONS------------->
-                            <div class="sideinfo"> <!--------penting-->
+                            <!----------- SIZES OPTION ------------->
+                            <div class="sideinfo"> 
                               <form id="orderForm">
                               <div class="Size">
                                 <label for="Size"></label>
@@ -161,7 +157,7 @@
                               <br>
                               </form>
 
-                            <!--parent box-->
+                            <!----------- PARENT-BOX ------------->
                             <div class="quantity">
                               <button type="button" class="quantity-btn">-</button>
                                 <input
@@ -174,7 +170,8 @@
                             <button type="button" class="quantity-btn">+</button>
                         </div>
                         <br />
-                         <!--add to cart button-->
+
+                         <!----------- ADD TO CART BUTTON ------------->
                           <button
                             type="button"
                             class="addtocart"
@@ -190,178 +187,10 @@
                           </div>
                         </div>
                     </div>
-                </div>
-                
-
-    <!---------------------- SCRIPTS ------------------------->
-    <script src="janji.js"></script>
-    <script src="ProDetails.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-  // Handle quantity buttons for all items
-  document.querySelectorAll(".quantity").forEach((quantityDiv) => {
-    const minusButton = quantityDiv.querySelector(".quantity-btn:first-of-type");
-    const plusButton = quantityDiv.querySelector(".quantity-btn:last-of-type");
-    const quantityInput = quantityDiv.querySelector(".quantity-input");
-
-    // Decrease quantity
-    minusButton.addEventListener("click", () => {
-      let currentValue = parseInt(quantityInput.value) || 0;
-      if (currentValue > 0) {
-        quantityInput.value = currentValue - 1;
-      }
-    });
-
-    // Increase quantity
-    plusButton.addEventListener("click", () => {
-      let currentValue = parseInt(quantityInput.value) || 0;
-      quantityInput.value = currentValue + 1;
-    });
-
-    // Validate input manually
-    quantityInput.addEventListener("input", () => {
-      let value = parseInt(quantityInput.value) || 0;
-      if (value < 0) value = 0; // Prevent negative values
-      quantityInput.value = value;
-    });
-  });
-
-  // Handle "Add to Cart" buttons
-  document.querySelectorAll(".addtocart").forEach((button) => {
-    button.addEventListener("click", () => {
-      const productContainer = button.closest(".col-4");
-      const productName = button.getAttribute("data-name");
-      const productPrice = parseFloat(button.getAttribute("data-price"));
-      const quantityInput = productContainer.querySelector(".quantity-input");
-      const quantity = parseInt(quantityInput.value) || 0;
-      
-      // Get the size select element if it exists
-      const sizeSelect = productContainer.querySelector("#Size");
-      const selectedSize = sizeSelect ? sizeSelect.value : null;
-
-      // Validate size selection if size selector exists
-      if (sizeSelect && !selectedSize) {
-        alert("Please select a size before adding to cart.");
-        return;
-      }
-
-      if (quantity > 0) {
-        // Get existing cart items from localStorage
-        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-        // Create unique identifier for product+size combination
-        const itemIdentifier = selectedSize 
-          ? `${productName}-Size${selectedSize}`
-          : productName;
-
-        // Check if the item with the same size already exists in the cart
-        const existingItemIndex = cartItems.findIndex(
-          (item) => item.identifier === itemIdentifier
-        );
-
-        if (existingItemIndex > -1) {
-          // Update quantity if item exists
-          cartItems[existingItemIndex].quantity += quantity;
-        } else {
-          // Add new item to the cart
-          cartItems.push({
-            identifier: itemIdentifier,
-            name: productName,
-            price: productPrice,
-            quantity: quantity,
-            size: selectedSize || null
-          });
-        }
-
-        // Save updated cart back to localStorage
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-        // Show success message with size information if applicable
-        const sizeInfo = selectedSize ? ` (Size: ${selectedSize})` : '';
-        alert(`Added ${quantity} ${productName}${sizeInfo} to cart!`);
-
-        // Redirect to cart page
-        window.location.href = '';
-      } else {
-        alert("Please select a quantity greater than 0.");
-      }
-    });
-  });
-});
-    </script>
-    <!-----search bar-->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    // Get the search form and prevent its default submission
-    const searchForm = document.querySelector('.search-container form');
-    const searchInput = document.querySelector('.search-container input[name="search"]');
-    const searchButton = document.querySelector('.search-container button');
-
-    
-    searchForm.addEventListener('submit', function(e) {
-        e.preventDefault();  // This prevents the form from submitting
-        performSearch();
-    });
-
-    
-    searchButton.addEventListener('click', function(e) {
-        e.preventDefault();  
-        performSearch();
-    });
-
-    
-    searchInput.addEventListener('input', performSearch);
-
-    function performSearch() {
-        // Get the search query and convert to lowercase
-        const query = searchInput.value.toLowerCase().trim();
-        
-        // Get all product containers
-        const products = document.querySelectorAll('.col-4');
-        
-        // Loop through each product
-        products.forEach(product => {
-            // Get the product name from the h4 element
-            const productName = product.querySelector('h4').innerText.toLowerCase();
-            
-            // Show/hide products based on search match
-            if (productName.includes(query)) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-
-        // Update layout if no results found
-        const visibleProducts = Array.from(products).filter(p => p.style.display !== 'none');
-        const noResultsMessage = document.getElementById('no-results-message');
-        
-        if (visibleProducts.length === 0 && query !== '') {
-            if (!noResultsMessage) {
-                const message = document.createElement('div');
-                message.id = 'no-results-message';
-                message.style.textAlign = 'center';
-                message.style.padding = '20px';
-                message.innerHTML = 'No Items found matching your search.';
-                document.querySelector('.small-container').appendChild(message);
-            }
-        } else if (noResultsMessage) {
-            noResultsMessage.remove();
-        }
-    }
-});
-    </script>
-            
+                </div>           
 </body>
-<!-------------FOOOTER--------------->
+
+<!--------------------------- FOOTER ------------------------------>
 <footer>
   <hr />
   <br />
@@ -410,7 +239,7 @@
         <p>Monday - Thursday</p>
         <br />
         <p>KOE E1 LEVEL 2</p>
-        <p>019 721 7750(ANAS)</p>
+        <p>019 721 7750 (ANAS)</p>
       </div>
     </div>
 
@@ -445,3 +274,174 @@
   });
 </script>
 </html>
+
+
+<!---------------------- SCRIPTS ------------------------->
+<script src="janji.js"></script>
+<script src="ProDetails.js"></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+// Handle quantity buttons for all items
+document.querySelectorAll(".quantity").forEach((quantityDiv) => {
+const minusButton = quantityDiv.querySelector(".quantity-btn:first-of-type");
+const plusButton = quantityDiv.querySelector(".quantity-btn:last-of-type");
+const quantityInput = quantityDiv.querySelector(".quantity-input");
+
+// Decrease quantity
+minusButton.addEventListener("click", () => {
+  let currentValue = parseInt(quantityInput.value) || 0;
+  if (currentValue > 0) {
+    quantityInput.value = currentValue - 1;
+  }
+});
+
+// Increase quantity
+plusButton.addEventListener("click", () => {
+  let currentValue = parseInt(quantityInput.value) || 0;
+  quantityInput.value = currentValue + 1;
+});
+
+// Validate input manually
+quantityInput.addEventListener("input", () => {
+  let value = parseInt(quantityInput.value) || 0;
+  if (value < 0) value = 0; // Prevent negative values
+  quantityInput.value = value;
+});
+});
+
+// Handle "Add to Cart" buttons
+document.querySelectorAll(".addtocart").forEach((button) => {
+button.addEventListener("click", () => {
+  const productContainer = button.closest(".col-4");
+  const productName = button.getAttribute("data-name");
+  const productPrice = parseFloat(button.getAttribute("data-price"));
+  const quantityInput = productContainer.querySelector(".quantity-input");
+  const quantity = parseInt(quantityInput.value) || 0;
+  
+  // Get the size select element if it exists
+  const sizeSelect = productContainer.querySelector("#Size");
+  const selectedSize = sizeSelect ? sizeSelect.value : null;
+
+  // Validate size selection if size selector exists
+  if (sizeSelect && !selectedSize) {
+    alert("Please select a size before adding to cart.");
+    return;
+  }
+
+  if (quantity > 0) {
+    // Get existing cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Create unique identifier for product+size combination
+    const itemIdentifier = selectedSize 
+      ? `${productName}-Size${selectedSize}`
+      : productName;
+
+    // Check if the item with the same size already exists in the cart
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.identifier === itemIdentifier
+    );
+
+    if (existingItemIndex > -1) {
+      // Update quantity if item exists
+      cartItems[existingItemIndex].quantity += quantity;
+    } else {
+      // Add new item to the cart
+      cartItems.push({
+        identifier: itemIdentifier,
+        name: productName,
+        price: productPrice,
+        quantity: quantity,
+        size: selectedSize || null
+      });
+    }
+
+    // Save updated cart back to localStorage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    // Show success message with size information if applicable
+    const sizeInfo = selectedSize ? ` (Size: ${selectedSize})` : '';
+    alert(`Added ${quantity} ${productName}${sizeInfo} to cart!`);
+
+    // Redirect to cart page
+    window.location.href = '';
+  } else {
+    alert("Please select a quantity greater than 0.");
+  }
+});
+});
+});
+</script>
+
+<!----- Search Bar------>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+// Get the search form and prevent its default submission
+const searchForm = document.querySelector('.search-container form');
+const searchInput = document.querySelector('.search-container input[name="search"]');
+const searchButton = document.querySelector('.search-container button');
+
+
+searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();  // This prevents the form from submitting
+    performSearch();
+});
+
+
+searchButton.addEventListener('click', function(e) {
+    e.preventDefault();  
+    performSearch();
+});
+
+
+searchInput.addEventListener('input', performSearch);
+
+function performSearch() {
+    // Get the search query and convert to lowercase
+    const query = searchInput.value.toLowerCase().trim();
+    
+    // Get all product containers
+    const products = document.querySelectorAll('.col-4');
+    
+    // Loop through each product
+    products.forEach(product => {
+        // Get the product name from the h4 element
+        const productName = product.querySelector('h4').innerText.toLowerCase();
+        
+        // Show/hide products based on search match
+        if (productName.includes(query)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+
+    // Update layout if no results found
+    const visibleProducts = Array.from(products).filter(p => p.style.display !== 'none');
+    const noResultsMessage = document.getElementById('no-results-message');
+    
+    if (visibleProducts.length === 0 && query !== '') {
+        if (!noResultsMessage) {
+            const message = document.createElement('div');
+            message.id = 'no-results-message';
+            message.style.textAlign = 'center';
+            message.style.padding = '20px';
+            message.innerHTML = 'No Items found matching your search.';
+            document.querySelector('.small-container').appendChild(message);
+        }
+    } else if (noResultsMessage) {
+        noResultsMessage.remove();
+    }
+}
+});
+</script>

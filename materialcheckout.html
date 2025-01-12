@@ -6,25 +6,15 @@
     <title>Paper Material | Oscent</title>
     <link rel="stylesheet" href="checkout.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Poppins:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cedarville+Cursive&family=Didact+Gothic&family=Eater&family=Gotu&family=Jacques+Francois&family=Julius+Sans+One&family=Parkinsans:wght@300..800&family=Playwrite+NL+Guides&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Eater&family=Gotu&family=Jacques+Francois&family=Julius+Sans+One&family=Parkinsans:wght@300..800&family=Playwrite+NL+Guides&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cedarville+Cursive&family=Didact+Gothic&family=Eater&family=Gotu&family=Jacques+Francois&family=Julius+Sans+One&family=Parkinsans:wght@300..800&family=Playwrite+NL+Guides&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <!--FOOTER-->
+  
+    <!---------------------- FOR FOOTER ------------------------->
   <link rel="stylesheet" href="footer.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cedarville+Cursive&family=Didact+Gothic&family=Eater&family=Fresca&family=Gotu&family=Jacques+Francois&family=Julius+Sans+One&family=Parkinsans:wght@300..800&family=Playwrite+NL+Guides&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -34,10 +24,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     rel="stylesheet"
   />
-  <!--FOOTER-->
 </head>
+
   <body>
-    <!---------------------- NAVBAR------------------------->
+    <!---------------------- NAVBAR ------------------------->
     <div class="bar"></div>
 
     <header>
@@ -52,6 +42,7 @@
             />
           </a>
         </div>
+
         <div class="links">
           <li><a id="about-link" href="#">About</a></li>
           <li><a href="servicepage.html">Services</a></li>
@@ -65,7 +56,7 @@
         </div>
 
         <div class="search-container">
-          <form >
+          <form>
             <input type="text" placeholder="S E A R C H" name="search" />
             <button type="submit">
               <i class="fa fa-search"></i>
@@ -75,197 +66,90 @@
       </div>
     </header>
 
-    <!------main body--------------->
-        <div class="product-detail">
-            <div class="image-container">
-            <img id="imageposition" src="Oscent_Pictures/Material Printing 1.jpg" alt="" class="productimgs active">
-            <img id="imageposition" src="Oscent_Pictures/Material Printing 2.png" alt="" class="productimgs">
-            <button id="prevButton" class="slider-button"><</button>
-            <button id="nextButton" class="slider-button">></button>
+  <!---------------------- MAIN BODY ------------------------->
+    <div class="product-detail">
+        <div class="image-container">
+          <img id="imageposition" src="Oscent_Pictures/Material Printing 1.jpg" alt="" class="productimgs active">
+          <img id="imageposition" src="Oscent_Pictures/Material Printing 2.png" alt="" class="productimgs">
+          <button id="prevButton" class="slider-button"><</button>
+          <button id="nextButton" class="slider-button">></button>
+        </div>
+        
+        <div class="product-info">
+          <h2>Material Printing</h2>
+          <p><strong>MYR 0.50</strong></p>
+          <p>Printing Paper</p>
 
-            </div>
-
-
-            <div class="product-info">
-                <h2>Material Printing</h2>
-                <p><strong>MYR 0.50</strong></p>
-                <p>Printing Paper</p>
-
-                <div class="col-4">
-
-                <div class="sideinfo"> <!--------penting-->
-                  <form id="orderForm">
-                  <div class="S">
-                    <label for="Size"></label>
-                    <select id="Size" required>
-                      <option value="" disabled selected>Paper sizes</option>
-                      <option >A4 (RM 0.50)</option>
-                      <option >A5 (RM 2.00)</option>
-                      <option >A6 (RM 4.00)</option>
-                    </select></div>
-                  <br>
-    
-                  <div class="papercolor">
-                    <select id="paperColor" required>
+          <div class="col-4">
+            <div class="sideinfo"> 
+              <form id="orderForm">
+                <div class="S">
+                  <label for="Size"></label>
+                  <select id="Size" required>
+                    <option value="" disabled selected>Paper sizes</option>
+                    <option >A4 (RM 0.50)</option>
+                    <option >A5 (RM 2.00)</option>
+                    <option >A6 (RM 4.00)</option>
+                  </select>
+                </div>
+                <br>
+                <div class="papercolor">
+                  <select id="paperColor" required>
                     <option value="" disabled selected>Color</option>
                     <option value="White">White</option>
                     <option value="Black">Black</option>
-                    
-                  </select></div>
-                  <br>
-                  </form>
-                  
-        
-                
-                <!--parent box-->
-                <div class="quantity">
-                  <button type="button" class="quantity-btn">-</button>
-                    <input
-                      type="number"
-                      class="quantity-input"
-                      name="quantity"
-                      value="0"
-                      min="0"
-                    />
-                <button type="button" class="quantity-btn">+</button>
-            </div>
-            <br />
-             <!--add to cart button-->
+                  </select>
+                </div>
+                <br>
+              </form>
+
+
+              <!---------------------- PARENT-BOX ------------------------->
+              <div class="quantity">
+                <button type="button" class="quantity-btn">-</button>
+                <input
+                  type="number"
+                  class="quantity-input"
+                  name="quantity"
+                  value="0"
+                  min="0"
+                />
+                <button type="button" class="quantity-btn">+</button>  
+              </div>
+              <br />
+
+              <!---------------------- ADD TO CART BUTTON ------------------------->
               <button
-                type="button"
-                class="addtocart"
-                data-name="Printing Paper"
-                data-price="0.50"
+              type="button"
+              class="addtocart"
+              data-name="Printing Paper"
+              data-price="0.50"
               >
               Add to Cart
               </button>
-              </div>
-              </div>
-<br>
-    <ul>
-    <li>Colors Black & White,               Colors </li>
-    <br>
-<hr>
-<br>
-    <li>Paper Material Plain, Glossy, Matte</li>
-    </ul>
-    <br>
-    <hr>
 
-                </div>
             </div>
+          </div>
+
+          <br>
+          <ul>
+            <li>Colors Black & White,               Colors </li>
+            <br>
+            <hr>
+            <br>
+            <li>Paper Material Plain, Glossy, Matte</li>
+          </ul>
+          <br>
+          <hr>
+
+         </div>
         </div>
       </div>
-
-                
-
+      </div>
   </body>
-  <!---------------------- SCRIPTS ------------------------->
-  <script src="janji.js"></script>
-  <script src="ProDetails.js"></script>
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-// Handle quantity buttons for all items
-document.querySelectorAll(".quantity").forEach((quantityDiv) => {
-  const minusButton = quantityDiv.querySelector(".quantity-btn:first-of-type");
-  const plusButton = quantityDiv.querySelector(".quantity-btn:last-of-type");
-  const quantityInput = quantityDiv.querySelector(".quantity-input");
 
-  // Decrease quantity
-  minusButton.addEventListener("click", () => {
-    let currentValue = parseInt(quantityInput.value) || 0;
-    if (currentValue > 0) {
-      quantityInput.value = currentValue - 1;
-    }
-  });
-
-  // Increase quantity
-  plusButton.addEventListener("click", () => {
-    let currentValue = parseInt(quantityInput.value) || 0;
-    quantityInput.value = currentValue + 1;
-  });
-
-  // Validate input manually
-  quantityInput.addEventListener("input", () => {
-    let value = parseInt(quantityInput.value) || 0;
-    if (value < 0) value = 0; // Prevent negative values
-    quantityInput.value = value;
-  });
-});
-
-// Handle "Add to Cart" buttons
-document.querySelectorAll(".addtocart").forEach((button) => {
-  button.addEventListener("click", () => {
-    const productContainer = button.closest(".col-4");
-    const productName = button.getAttribute("data-name");
-    const productPrice = parseFloat(button.getAttribute("data-price"));
-    const quantityInput = productContainer.querySelector(".quantity-input");
-    const quantity = parseInt(quantityInput.value) || 0;
-    
-    // Get the size select element if it exists
-    const sizeSelect = productContainer.querySelector("#Size");
-    const selectedSize = sizeSelect ? sizeSelect.value : null;
-
-    // Validate size selection if size selector exists
-    if (sizeSelect && !selectedSize) {
-      alert("Please select a size before adding to cart.");
-      return;
-    }
-
-    if (quantity > 0) {
-      // Get existing cart items from localStorage
-      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-      // Create unique identifier for product+size combination
-      const itemIdentifier = selectedSize 
-        ? `${productName}-Size${selectedSize}`
-        : productName;
-
-      // Check if the item with the same size already exists in the cart
-      const existingItemIndex = cartItems.findIndex(
-        (item) => item.identifier === itemIdentifier
-      );
-
-      if (existingItemIndex > -1) {
-        // Update quantity if item exists
-        cartItems[existingItemIndex].quantity += quantity;
-      } else {
-        // Add new item to the cart
-        cartItems.push({
-          identifier: itemIdentifier,
-          name: productName,
-          price: productPrice,
-          quantity: quantity,
-          size: selectedSize || null
-        });
-      }
-
-      // Save updated cart back to localStorage
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-      // Show success message with size information if applicable
-      const sizeInfo = selectedSize ? ` (Size: ${selectedSize})` : '';
-      alert(`Added ${quantity} ${productName}${sizeInfo} to cart!`);
-
-      // Redirect to cart page
-      window.location.href = '';
-    } else {
-      alert("Please select a quantity greater than 0.");
-    }
-  });
-});
-});
-  </script>
-
-  <!-------------FOOOTER--------------->
+  
+  <!---------------------- FOOTER ------------------------->
   <footer>
     <hr />
     <br />
@@ -314,7 +198,7 @@ document.querySelectorAll(".addtocart").forEach((button) => {
           <p>Monday - Thursday</p>
           <br />
           <p>KOE E1 LEVEL 2</p>
-          <p>019 721 7750(ANAS)</p>
+          <p>019 721 7750 (ANAS)</p>
         </div>
       </div>
 
@@ -349,3 +233,111 @@ document.querySelectorAll(".addtocart").forEach((button) => {
     });
   </script>
 </html>
+
+
+<!---------------------- SCRIPTS ------------------------->
+<script src="janji.js"></script>
+<script src="ProDetails.js"></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+// Handle quantity buttons for all items
+document.querySelectorAll(".quantity").forEach((quantityDiv) => {
+const minusButton = quantityDiv.querySelector(".quantity-btn:first-of-type");
+const plusButton = quantityDiv.querySelector(".quantity-btn:last-of-type");
+const quantityInput = quantityDiv.querySelector(".quantity-input");
+
+// Decrease quantity
+minusButton.addEventListener("click", () => {
+  let currentValue = parseInt(quantityInput.value) || 0;
+  if (currentValue > 0) {
+    quantityInput.value = currentValue - 1;
+  }
+});
+
+// Increase quantity
+plusButton.addEventListener("click", () => {
+  let currentValue = parseInt(quantityInput.value) || 0;
+  quantityInput.value = currentValue + 1;
+});
+
+// Validate input manually
+quantityInput.addEventListener("input", () => {
+  let value = parseInt(quantityInput.value) || 0;
+  if (value < 0) value = 0; // Prevent negative values
+  quantityInput.value = value;
+});
+});
+
+// Handle "Add to Cart" buttons
+document.querySelectorAll(".addtocart").forEach((button) => {
+button.addEventListener("click", () => {
+  const productContainer = button.closest(".col-4");
+  const productName = button.getAttribute("data-name");
+  const productPrice = parseFloat(button.getAttribute("data-price"));
+  const quantityInput = productContainer.querySelector(".quantity-input");
+  const quantity = parseInt(quantityInput.value) || 0;
+  
+  // Get the size select element if it exists
+  const sizeSelect = productContainer.querySelector("#Size");
+  const selectedSize = sizeSelect ? sizeSelect.value : null;
+
+  // Validate size selection if size selector exists
+  if (sizeSelect && !selectedSize) {
+    alert("Please select a size before adding to cart.");
+    return;
+  }
+
+  if (quantity > 0) {
+    // Get existing cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Create unique identifier for product+size combination
+    const itemIdentifier = selectedSize 
+      ? `${productName}-Size${selectedSize}`
+      : productName;
+
+    // Check if the item with the same size already exists in the cart
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.identifier === itemIdentifier
+    );
+
+    if (existingItemIndex > -1) {
+      // Update quantity if item exists
+      cartItems[existingItemIndex].quantity += quantity;
+    } else {
+      // Add new item to the cart
+      cartItems.push({
+        identifier: itemIdentifier,
+        name: productName,
+        price: productPrice,
+        quantity: quantity,
+        size: selectedSize || null
+      });
+    }
+
+    // Save updated cart back to localStorage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    // Show success message with size information if applicable
+    const sizeInfo = selectedSize ? ` (Size: ${selectedSize})` : '';
+    alert(`Added ${quantity} ${productName}${sizeInfo} to cart!`);
+
+    // Redirect to cart page
+    window.location.href = '';
+  } else {
+    alert("Please select a quantity greater than 0.");
+  }
+});
+});
+});
+</script>
+

@@ -9,9 +9,7 @@ body {
   font-style: normal;
 }
 
-/*-------------------coat and boots----------------------*/
 .container {
-  background-color: #EAF4F5;
   max-width: 100%;
   margin: 0 auto;
   padding-left: 15px;
@@ -70,11 +68,6 @@ body {
   color: #000000;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: "Gotu", serif;
@@ -95,8 +88,95 @@ header {
   background-color: #fff;
 }
 
+/*------------------ NAV BAR -------------------*/
+.containerthatcontains {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
 
-/*------------------ POOOOOOOOOOOOSTERRRRRRRRRRRRRRRRRRRRRR---------------------------*/
+/* LOGO STYLES */
+.containerthatcontains .logo {
+  flex-shrink: 0;
+}
+
+/* LINKS STYLES */
+.containerthatcontains .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.containerthatcontains li a {
+  font-family: "Gotu", serif;
+  color: #333;
+  text-decoration: none;
+  font-size: 33px;
+  transition: color 0.3s;
+}
+
+.containerthatcontains .links i {
+  color: grey; /* COLOR OF THE CART BAG */
+}
+
+/* SEARCH CONTAINER STYLES */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #eaf4f5;
+  border-radius: 30px;
+  padding: 5px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-container input[type="text"] {
+  text-align: center;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background: #eaf4f5;
+  color: black;
+  border-radius: 30px;
+}
+
+.search-container button {
+  background: #eaf4f5;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 17px;
+}
+
+.search-container button i {
+  color: black; /* ENSURE ICON IS VISIBLE */
+}
+
+.search-container button:hover {
+  background: #ffffff;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: black;
+}
+
+header::after {
+  padding-top: 5px;
+  content: "";
+  background: #004154;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/*------------------ POSTER -----------------------*/
 .poster {
   flex: 1;
   background: #ffffff;
@@ -150,96 +230,8 @@ header {
 }
 
 
-/* NAVBAR */
-.containerthatcontains {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
 
-/* Logo styles */
-.containerthatcontains .logo {
-  flex-shrink: 0;
-}
-
-/* Links styles */
-.containerthatcontains .links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.containerthatcontains li a {
-  font-family: "Gotu", serif;
-  color: #333;
-  text-decoration: none;
-  font-size: 33px;
-  transition: color 0.3s;
-}
-
-.containerthatcontains .links i {
-  color: grey; /* color of the bag*/
-}
-
-/* Search container styles */
-.search-container {
-  display: flex;
-  align-items: center;
-  background: #eaf4f5;
-  border-radius: 30px;
-  padding: 5px; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.search-container input[type="text"] {
-  text-align: center;
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  outline: none;
-  background: #eaf4f5;
-  color: black;
-  border-radius: 30px;
-}
-
-.search-container button {
-  background: #eaf4f5;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  font-size: 17px;
-}
-
-.search-container button i {
-  color: black; /* Ensures icon is visible */
-}
-
-.search-container button:hover {
-  background: #ffffff;
-}
-
-.search-container input[type="text"]::placeholder {
-  color: black;
-}
-
-header::after {
-  padding-top: 5px;
-  content: "";
-  background: #004154;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-
-/*-------------------- lab options--------------*/
+/*-------------------- LAB OPTIONS ----------------*/
 .lab-options {
   background: #ffffff;
 }
@@ -319,9 +311,8 @@ header::after {
   background: transparent;
 }
 
-/* Add-to-cart button style */
 
-
+/* ADD TO CART BUTTON STYLE */
 .addtocart {
   display: block;
   width: 100%;
@@ -336,7 +327,7 @@ header::after {
   transition: 0.3s;
 }
 
-/*----------sizes box for coat and boots---------*/
+/*---------- SIZES BOX ---------*/
 
 .sideinfo{
   display: flex;
@@ -349,7 +340,7 @@ header::after {
   flex-direction: column;
 }
 
-/* Styling for dropdown boxes */
+/* STYLING FOR DROPDOWN BOXES */
 #orderForm select {
   width: 140px; 
   height: 50px; 
@@ -360,8 +351,7 @@ header::after {
   cursor: pointer; 
 }
 
-
-/* Styling for the dropdown arrow */
+/* STYLING FOR DROPDOWN ARROW */
 #orderForm select::-ms-expand {
   display: none; /
 }

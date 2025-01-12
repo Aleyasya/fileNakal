@@ -23,7 +23,7 @@ header {
   background-color: #fff;
 }
 
-/* MNAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+/*------------------NAV BAR-------------------*/
 .containerthatcontains {
   display: flex;
   justify-content: space-between;
@@ -31,12 +31,12 @@ header {
   padding: 15px;
 }
 
-/* Logo styles */
+/* LOGO STYLES */
 .containerthatcontains .logo {
   flex-shrink: 0;
 }
 
-/* Links styles */
+/* LINKS STYLES */
 .containerthatcontains .links {
   display: flex;
   justify-content: center;
@@ -56,10 +56,10 @@ header {
 }
 
 .containerthatcontains .links i {
-  color: grey; /* color of the bag*/
+  color: grey; /* COLOR OF THE CART BAG */
 }
 
-/* Search container styles */
+/* SEARCH CONTAINER STYLES */
 .search-container {
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ header {
 }
 
 .search-container button i {
-  color: black; /* Ensures icon is visible */
+  color: black; /* ENSURE ICON IS VISIBLE */
 }
 
 .search-container button:hover {
@@ -125,7 +125,7 @@ header::after {
   }
 }
 
-/*-----new--------*/
+/*----- NEW --------*/
 
 .cart-container {
   max-width: 900px;
@@ -150,7 +150,6 @@ table td {
 table th {
   color: #000;
   font-weight: 100;
-  /* display: none; */
 }
 
 .cart-footer {

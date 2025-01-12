@@ -6,18 +6,26 @@
     <title>Oscent | Feedback Form</title>
     <link rel="stylesheet" href="feedbackform.css" />
   </head>
+
+  
   <body>
     <div class="feedback-form">
       <h2>Share your thoughts here!</h2>
       <form id="feedbackForm" action="submit_feedback.php" method="post">
+
+        <!---------------------- WRITTEN NAME BOX ------------------------->
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
         </div>
+
+        <!---------------------- WRITTEN EMAIL BOX ------------------------->
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
         </div>
+
+        <!---------------------- CHOOSE RATING ------------------------->
         <div class="form-group">
           <label for="rating">Rating</label>
           <select id="rating" name="rating" required>
@@ -29,12 +37,15 @@
             <option value="5">5 - Very Satisfied</option>
           </select>
         </div>
+
+        <!---------------------- WRITE COMMENTS BOX ------------------------->
         <div class="form-group">
           <label for="comments">Comments</label>
           <textarea id="comments" name="comments" rows="5" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
+
       <div id="feedbackMessage"></div>
     </div>
     <script src="feedbackform.js"></script>
