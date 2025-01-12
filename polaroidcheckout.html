@@ -52,7 +52,7 @@
           </a>
         </div>
         <div class="links">
-          <li><a href="#">About</a></li>
+          <li><a id="about-link" href="#">About</a></li>
           <li><a href="servicepage.html">Services</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="login.html">My Account</a></li>
@@ -170,7 +170,7 @@
   <footer>
     <hr />
     <br />
-    <div class="footer-container">
+    <div class="footer-container" id="footer-containing">
       <div class="footer-section">
         <h3>ABOUT US</h3>
         <div class="font">
@@ -241,4 +241,14 @@
       <p>Site by the Dream Team</p>
     </div>
   </footer>
+  <script>
+    // Smooth scroll to the footer
+    document
+      .getElementById("about-link")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        const footer = document.getElementById("footer-containing");
+        footer.scrollIntoView({ behavior: "smooth" });
+      });
+  </script>
 </html>
