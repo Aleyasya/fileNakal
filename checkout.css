@@ -181,27 +181,55 @@ header::after {
 
 .quantity {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 10px 0;
+  background: transparent;
 }
 
-
-.quantity button {
-  background-color: #EAF4F5;
-  color: #000;
-  border: none;
-  padding: 10px;
+.quantity-btn {
+  background: transparent;
+  padding: 5px 15px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.quantity input {
-  padding: 10px;
+.quantity-btn:hover {
+  background-color: #004154;
+  color: #fff;
+}
+
+.quantity-input {
   text-align: center;
-  background-color: #EAF4F5;
+  height: 30px;
+  width: 40px;
+  padding: 5px;
+  border: 1px solid #004154;
+  margin: 0 5px;
+  background: transparent;
 }
 
-/*-adddddddddd to cart---------------button*/
+/* Add-to-cart button style */
+.addtocart {
+  display: block;
+  width: 100%;
+  background-color: #004154;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addtocart {
+  background-color: #004154;
+}
+
 
 .sideinfo{
   display: flex;

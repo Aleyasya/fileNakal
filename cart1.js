@@ -3,105 +3,146 @@ document.addEventListener("DOMContentLoaded", () => {
   const subtotalElem = document.getElementById("subtotal");
   const checkoutButton = document.getElementById("checkoutButton");
 
-  function renderCart() {
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    let subtotal = 0;
-    cartItemsTable.innerHTML = "";
+  // Helper function to format currency
+  const formatCurrency = (amount) => `RM${amount.toFixed(2)}`;
 
-    cartItems.forEach((item) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
+  // Cart state management
+  const CartManager = {
+    getItems() {
+      return JSON.parse(localStorage.getItem("cartItems")) || [];
+    },
+
+    saveItems(items) {
+      localStorage.setItem("cartItems", JSON.stringify(items));
+    },
+
+    addItem(item) {
+      const items = this.getItems();
+      const existingItem = items.find((i) => i.name === item.name);
+
+      if (existingItem) {
+        existingItem.quantity += item.quantity;
+      } else {
+        items.push(item);
+      }
+
+      this.saveItems(items);
+    },
+
+    updateQuantity(name, delta) {
+      const items = this.getItems();
+      const item = items.find((i) => i.name === name);
+
+      if (item) {
+        item.quantity += delta;
+        if (item.quantity <= 0) {
+          this.removeItem(name);
+        } else {
+          this.saveItems(items);
+        }
+      }
+    },
+
+    removeItem(name) {
+      const items = this.getItems();
+      const filteredItems = items.filter((item) => item.name !== name);
+      this.saveItems(filteredItems);
+    },
+
+    clearCart() {
+      localStorage.removeItem("cartItems");
+    },
+
+    calculateSubtotal() {
+      return this.getItems().reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+    },
+  };
+
+  // UI Rendering
+  function renderCart() {
+    const cartItems = CartManager.getItems();
+    const subtotal = CartManager.calculateSubtotal();
+
+    cartItemsTable.innerHTML = cartItems
+      .map(
+        (item) => `
+      <tr>
         <td>${item.name}</td>
-        <td>RM${item.price.toFixed(2)}</td>
         <td>
           <button class="quantity-button" data-name="${
             item.name
           }" data-change="-1">-</button>
-          ${item.quantity}
+          <span class="quantity-display">${item.quantity}</span>
           <button class="quantity-button" data-name="${
             item.name
           }" data-change="1">+</button>
           <button class="remove-button" data-name="${item.name}">Remove</button>
         </td>
-        <td>RM${(item.price * item.quantity).toFixed(2)}</td>
-      `;
-      cartItemsTable.appendChild(row);
-      subtotal += item.price * item.quantity;
-    });
+        <td>${formatCurrency(item.price * item.quantity)}</td>
+      </tr>
+    `
+      )
+      .join("");
 
-    subtotalElem.textContent = `Subtotal: RM${subtotal.toFixed(2)}`;
+    subtotalElem.textContent = `Subtotal: ${formatCurrency(subtotal)}`;
 
-    // Show/hide checkout button based on cart contents
     if (checkoutButton) {
       checkoutButton.style.display = cartItems.length > 0 ? "block" : "none";
     }
   }
 
-  function updateQuantity(name, delta) {
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const itemIndex = cartItems.findIndex((item) => item.name === name);
+  // Event Handlers
+  function handleCartAction(event) {
+    const button = event.target;
+    const name = button.getAttribute("data-name");
 
-    if (itemIndex > -1) {
-      cartItems[itemIndex].quantity += delta;
-      if (cartItems[itemIndex].quantity <= 0) {
-        cartItems.splice(itemIndex, 1);
-      }
+    if (button.classList.contains("quantity-button")) {
+      const change = parseInt(button.getAttribute("data-change"), 10);
+      CartManager.updateQuantity(name, change);
+    } else if (button.classList.contains("remove-button")) {
+      CartManager.removeItem(name);
+    }
 
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      renderCart();
+    renderCart();
+  }
+
+  function handleCheckout() {
+    if (confirm("Proceed to checkout?")) {
+      CartManager.clearCart();
+      window.location.href = "money.html";
     }
   }
 
-  function removeItem(name) {
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const itemIndex = cartItems.findIndex((item) => item.name === name);
-
-    if (itemIndex > -1) {
-      cartItems.splice(itemIndex, 1);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      renderCart();
-    }
-  }
-
-  if (cartItemsTable) {
-    cartItemsTable.addEventListener("click", (event) => {
-      const button = event.target;
-      if (button.classList.contains("quantity-button")) {
-        const name = button.getAttribute("data-name");
-        const change = parseInt(button.getAttribute("data-change"), 10);
-        updateQuantity(name, change);
-      } else if (button.classList.contains("remove-button")) {
-        const name = button.getAttribute("data-name");
-        removeItem(name);
-      }
-    });
-
-    // Parse URL parameters for Buy Now functionality
+  // Handle Buy Now functionality from URL parameters
+  function handleBuyNowParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const queryProduct = urlParams.get("product");
     const queryPrice = urlParams.get("price");
     const queryQuantity = urlParams.get("quantity");
 
     if (queryProduct && queryPrice && queryQuantity) {
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      cartItems.push({
+      CartManager.addItem({
         name: queryProduct,
         price: parseFloat(queryPrice),
         quantity: parseInt(queryQuantity),
       });
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Clean up URL
       window.history.replaceState({}, document.title, "cart1.html");
     }
+  }
 
+  // Initialize cart functionality
+  if (cartItemsTable) {
+    cartItemsTable.addEventListener("click", handleCartAction);
     if (checkoutButton) {
-      checkoutButton.addEventListener("click", () => {
-        if (confirm("Proceed to checkout?")) {
-          localStorage.clear();
-          window.location.href = "money.html";
-        }
-      });
+      checkoutButton.addEventListener("click", handleCheckout);
     }
 
+    handleBuyNowParams();
     renderCart();
   }
 });
