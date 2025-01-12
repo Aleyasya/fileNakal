@@ -169,7 +169,7 @@ header::after {
 }
 
 .poster-content {
-  background:#EAF4F5 ;
+  background: #eaf4f5;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -181,7 +181,7 @@ header::after {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  color: #EAF4F5;
+  color: #eaf4f5;
 }
 
 .image-box {
@@ -195,9 +195,9 @@ header::after {
 }
 
 .image-box img {
-  max-width: 100%;  
-  height: auto; 
-  max-height: 400px; 
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
   width: auto;
   align-items: center;
   justify-content: center;
@@ -217,11 +217,11 @@ header::after {
   font-style: normal;
   font-size: 4rem;
   line-height: 0.2;
-  color:#000;
+  color: #000;
 }
 
 .text-content h2 {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   font-weight: 2000;
   margin: 0 auto 80px;
@@ -248,7 +248,7 @@ h4 {
 
 .breakfast-options .col-4 {
   margin: 10px 20px;
-  background: #EAF4F5;
+  background: #eaf4f5;
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(194, 66, 66, 0.1);
   transition: transform 0.5s;
@@ -324,4 +324,72 @@ h4 {
 
 .addtocart {
   background-color: #004154;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  hamburger {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  .links li {
+    margin: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .containerthatcontains {
+    flex-direction: column;
+  }
+  .landing-page {
+    align-items: center;
+    justify-content: center;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .col-4 {
+    flex-basis: 25%;
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-left,
+  .navbar-right {
+    margin-bottom: 15px;
+  }
+
+  .navbar-left ul,
+  .navbar-right ul {
+    justify-content: center;
+  }
 }

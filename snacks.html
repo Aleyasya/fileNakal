@@ -44,6 +44,14 @@
             />
           </a>
         </div>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+
         <div class="links">
           <li><a id="about-link" href="#">About</a></li>
           <li><a href="servicepage.html">Services</a></li>
@@ -549,4 +557,22 @@
       footer.scrollIntoView({ behavior: "smooth" });
     });
   </script>
+  script>
+  // Smooth scroll to the footer
+  document.getElementById("about-link").addEventListener("click", function (event) {
+    event.preventDefault();
+    const footer = document.getElementById("footer-containing");
+    footer.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const links = document.querySelector(".links");
+
+    hamburger.addEventListener("click", () => {
+      links.style.display = links.style.display === "flex" ? "none" : "flex";
+    });
+  });
+</script>
 </html>

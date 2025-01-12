@@ -169,7 +169,7 @@ header::after {
 }
 
 .poster-content {
-  background-color: #EAF4F5 ;
+  background-color: #eaf4f5;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -186,9 +186,9 @@ header::after {
 }
 
 .image-box img {
-  max-width: 400%;  
-  height: auto; 
-  max-height: 400px; 
+  max-width: 400%;
+  height: auto;
+  max-height: 400px;
   width: auto;
   align-items: center;
   justify-content: center;
@@ -203,13 +203,13 @@ header::after {
 }
 
 .poster-text h4 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: normal;
   text-align: center;
   font-weight: bolder;
   font-size: 3rem;
-  letter-spacing: 5px; 
-  line-height: 1.5; 
+  letter-spacing: 5px;
+  line-height: 1.5;
   color: #000;
   margin: 0;
 }
@@ -219,7 +219,6 @@ header::after {
 .drinking-options {
   background: #ffffff;
 }
-
 
 h4 {
   color: #555;
@@ -315,4 +314,96 @@ h4 {
   background-color: #004154;
 }
 
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
 
+.hamburger span {
+  background: #333;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+/* Hide links by default for smaller screens */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  hamburger {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  .links li {
+    margin: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .containerthatcontains {
+    flex-direction: column;
+  }
+  .landing-page {
+    align-items: center;
+    justify-content: center;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .col-4 {
+    flex-basis: 25%;
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-left,
+  .navbar-right {
+    margin-bottom: 15px;
+  }
+
+  .navbar-left ul,
+  .navbar-right ul {
+    justify-content: center;
+  }
+}
