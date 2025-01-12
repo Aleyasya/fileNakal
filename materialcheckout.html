@@ -91,15 +91,17 @@
                 <p><strong>MYR 0.50</strong></p>
                 <p>Printing Paper</p>
 
+                <div class="col-4">
+
                 <div class="sideinfo"> <!--------penting-->
                   <form id="orderForm">
-                  <div class="papersize">
-                    <label for="paperSize"></label>
-                    <select id="paperSize" required>
+                  <div class="S">
+                    <label for="Size"></label>
+                    <select id="Size" required>
                       <option value="" disabled selected>Paper sizes</option>
-                      <option value="A4" data-price="0.50">A4 (RM 0.50)</option>
-                      <option value="A5" data-price="2.00">A5 (RM 2.00)</option>
-                      <option value="A6" data-price="4.00">A6 (RM 4.00)</option>
+                      <option >A4 (RM 0.50)</option>
+                      <option >A5 (RM 2.00)</option>
+                      <option >A6 (RM 4.00)</option>
                     </select></div>
                   <br>
     
@@ -115,16 +117,30 @@
                   
         
                 
+                <!--parent box-->
                 <div class="quantity">
-                    <button type="button" class="quantity-minus">-</button>
-                    <input type="number" id="quantity" name="quantity" value="0" min="0">
-                    <button type="button" class="quantity-plus">+</button>
-                </div>
-                <div class="actions">
-                    <button type="button" class="addtocart" data-name="Paper Material" data-price="0.50">Add to Cart</button>
-            
-                </div>
-              
+                  <button type="button" class="quantity-btn">-</button>
+                    <input
+                      type="number"
+                      class="quantity-input"
+                      name="quantity"
+                      value="0"
+                      min="0"
+                    />
+                <button type="button" class="quantity-btn">+</button>
+            </div>
+            <br />
+             <!--add to cart button-->
+              <button
+                type="button"
+                class="addtocart"
+                data-name="Printing Paper"
+                data-price="0.50"
+              >
+              Add to Cart
+              </button>
+              </div>
+              </div>
 <br>
     <ul>
     <li>Colors Black & White,               Colors </li>
@@ -143,22 +159,111 @@
 
                 
 
-    <script src="janji.js"></script>
-    <script src="ProDetails.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
-    <script>
-        function redirectToBuyNow() {
-            const productName = "Paper Material";
-            const productPrice = 0.50;
-            const quantity = document.getElementById('quantity').value;
-
-            window.location.href = `buynow.html?product=${encodeURIComponent(productName)}&price=${productPrice}&quantity=${quantity}`;
-        }
-    </script>
   </body>
+  <!---------------------- SCRIPTS ------------------------->
+  <script src="janji.js"></script>
+  <script src="ProDetails.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+// Handle quantity buttons for all items
+document.querySelectorAll(".quantity").forEach((quantityDiv) => {
+  const minusButton = quantityDiv.querySelector(".quantity-btn:first-of-type");
+  const plusButton = quantityDiv.querySelector(".quantity-btn:last-of-type");
+  const quantityInput = quantityDiv.querySelector(".quantity-input");
+
+  // Decrease quantity
+  minusButton.addEventListener("click", () => {
+    let currentValue = parseInt(quantityInput.value) || 0;
+    if (currentValue > 0) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+
+  // Increase quantity
+  plusButton.addEventListener("click", () => {
+    let currentValue = parseInt(quantityInput.value) || 0;
+    quantityInput.value = currentValue + 1;
+  });
+
+  // Validate input manually
+  quantityInput.addEventListener("input", () => {
+    let value = parseInt(quantityInput.value) || 0;
+    if (value < 0) value = 0; // Prevent negative values
+    quantityInput.value = value;
+  });
+});
+
+// Handle "Add to Cart" buttons
+document.querySelectorAll(".addtocart").forEach((button) => {
+  button.addEventListener("click", () => {
+    const productContainer = button.closest(".col-4");
+    const productName = button.getAttribute("data-name");
+    const productPrice = parseFloat(button.getAttribute("data-price"));
+    const quantityInput = productContainer.querySelector(".quantity-input");
+    const quantity = parseInt(quantityInput.value) || 0;
+    
+    // Get the size select element if it exists
+    const sizeSelect = productContainer.querySelector("#Size");
+    const selectedSize = sizeSelect ? sizeSelect.value : null;
+
+    // Validate size selection if size selector exists
+    if (sizeSelect && !selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
+    }
+
+    if (quantity > 0) {
+      // Get existing cart items from localStorage
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      // Create unique identifier for product+size combination
+      const itemIdentifier = selectedSize 
+        ? `${productName}-Size${selectedSize}`
+        : productName;
+
+      // Check if the item with the same size already exists in the cart
+      const existingItemIndex = cartItems.findIndex(
+        (item) => item.identifier === itemIdentifier
+      );
+
+      if (existingItemIndex > -1) {
+        // Update quantity if item exists
+        cartItems[existingItemIndex].quantity += quantity;
+      } else {
+        // Add new item to the cart
+        cartItems.push({
+          identifier: itemIdentifier,
+          name: productName,
+          price: productPrice,
+          quantity: quantity,
+          size: selectedSize || null
+        });
+      }
+
+      // Save updated cart back to localStorage
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Show success message with size information if applicable
+      const sizeInfo = selectedSize ? ` (Size: ${selectedSize})` : '';
+      alert(`Added ${quantity} ${productName}${sizeInfo} to cart!`);
+
+      // Redirect to cart page
+      window.location.href = '';
+    } else {
+      alert("Please select a quantity greater than 0.");
+    }
+  });
+});
+});
+  </script>
 
   <!-------------FOOOTER--------------->
   <footer>
