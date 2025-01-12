@@ -23,7 +23,7 @@ header {
   background-color: #fff;
 }
 
-/* MNAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+/*------------------ NAV BAR -------------------*/
 .containerthatcontains {
   display: flex;
   justify-content: space-between;
@@ -31,12 +31,12 @@ header {
   padding: 15px;
 }
 
-/* Logo styles */
+/* LOGO STYLES */
 .containerthatcontains .logo {
   flex-shrink: 0;
 }
 
-/* Links styles */
+/* LINKS STYLES */
 .containerthatcontains .links {
   display: flex;
   justify-content: center;
@@ -56,10 +56,10 @@ header {
 }
 
 .containerthatcontains .links i {
-  color: grey; /* color of the bag*/
+  color: grey; /* COLOR OF THE CART BAG */
 }
 
-/* Search container styles */
+/* SEARCH CONTAINER STYLES */
 .search-container {
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ header {
 }
 
 .search-container button i {
-  color: black; /* Ensures icon is visible */
+  color: black; /* ENSURE ICON IS VISIBLE */
 }
 
 .search-container button:hover {
@@ -111,7 +111,7 @@ header::after {
   transform: translate(-50%);
 }
 
-/*------------main body-------------------*/
+/*------------ MAIN BODY -------------------*/
 .product-detail {
   display: flex;
   align-items: flex-start;
@@ -149,14 +149,14 @@ header::after {
   margin: 10px 0;
 }
 
-/*----------------options-----------------------*/
+/*---------------- OPTIONS -----------------------*/
 
 #orderForm {
   display: flex;
   flex-direction: column;
 }
 
-/* Styling for dropdown boxes */
+/* STYLING FOR DROPDOWN BOXES */
 #orderForm select {
   width: 150px; 
   height: 50px; 
@@ -168,7 +168,7 @@ header::after {
 }
 
 
-/* Styling for the dropdown arrow */
+/* STYLING FOR DROPDOWN ARROW */
 #orderForm select::-ms-expand {
   display: none; /
 }
@@ -211,7 +211,7 @@ header::after {
   background: transparent;
 }
 
-/* Add-to-cart button style */
+/* ADD TO CART BUTTON STYLE */
 .addtocart {
   display: block;
   width: 100%;
@@ -295,7 +295,7 @@ ul{
 }
 
 
-/*--------------DROP DOWN OPTIONS-----------------*/
+/*-------------- DROP DOWN OPTIONS -----------------*/
 .dropbtn {
   background-color: #fff;
   color: #adadad;

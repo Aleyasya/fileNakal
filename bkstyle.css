@@ -11,7 +11,6 @@ body {
 }
 
 .container {
-  background-color: #fcfae2;
   max-width: 100%;
   margin: 0 auto;
   padding-left: 15px;
@@ -33,7 +32,7 @@ body {
 }
 
 .col-4 img {
-  width: 50%;
+  width: 100%;
 }
 
 .title {
@@ -54,11 +53,7 @@ body {
   padding-bottom: 30px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: "Gotu", serif;
@@ -86,12 +81,12 @@ header {
   padding: 15px;
 }
 
-/* Logo styles */
+/* LOGO STYLES */
 .containerthatcontains .logo {
   flex-shrink: 0;
 }
 
-/* Links styles */
+/* LINKS STYLES */
 .containerthatcontains .links {
   display: flex;
   justify-content: center;
@@ -111,10 +106,10 @@ header {
 }
 
 .containerthatcontains .links i {
-  color: grey; /* color of the bag*/
+  color: grey; /* COLOR OF THE CART BAG */
 }
 
-/* Search container styles */
+/* SEARCH CONTAINER STYLES */
 .search-container {
   display: flex;
   align-items: center;
@@ -144,7 +139,7 @@ header {
 }
 
 .search-container button i {
-  color: black; /* Ensures icon is visible */
+  color: black; /* ENSURE ICON IS VISIBLE */
 }
 
 .search-container button:hover {
@@ -166,7 +161,7 @@ header::after {
   transform: translate(-50%);
 }
 
-/* -------------------------- POSTER--------------------------------------*/
+/* -------------------------- POSTER --------------------------------------*/
 .poster {
   flex: 1;
   background: #ffffff;
@@ -235,7 +230,7 @@ header::after {
   color: #000000;
 }
 
-/*---------------------------breakfast options------------------------*/
+/*--------------------------- BREAKFAST OPTIONS ------------------------*/
 .breakfast-options {
   background: #ffffff;
 }
@@ -279,8 +274,7 @@ h4 {
   transform: translateY(-5px);
 }
 
-/*-------------addition buttons-----------*/
-/*--------number of water-------------*/
+/*-------- BUTTON TO ADD NUMBER OF MENUS -------------*/
 .quantity {
   display: flex;
   justify-content: center;
@@ -313,7 +307,7 @@ h4 {
   background: transparent;
 }
 
-/* Add-to-cart button style */
+/* ADD TO CART BUTTON STYLE */
 .addtocart {
   display: block;
   width: 100%;

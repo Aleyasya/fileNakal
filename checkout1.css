@@ -23,7 +23,7 @@
     background-color: #fff;
   }
   
-  /* MNAVBARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+  /*------------------ NAV BAR -------------------*/
   .containerthatcontains {
     display: flex;
     justify-content: space-between;
@@ -31,12 +31,12 @@
     padding: 15px;
   }
   
-  /* Logo styles */
+  /* LOGO STYLES */
   .containerthatcontains .logo {
     flex-shrink: 0;
   }
   
-  /* Links styles */
+  /* LINKS STYLES */
   .containerthatcontains .links {
     display: flex;
     justify-content: center;
@@ -56,10 +56,10 @@
   }
   
   .containerthatcontains .links i {
-    color: grey; /* color of the bag*/
+    color: grey; /* COLOR OF THE CART BAG */
   }
   
-  /* Search container styles */
+  /* SEARCH CONTAINER STYLES */
   .search-container {
     display: flex;
     align-items: center;
@@ -89,7 +89,7 @@
   }
   
   .search-container button i {
-    color: black; /* Ensures icon is visible */
+    color: black; /* ENSURE ICON IS VISIBLE */
   }
   
   .search-container button:hover {
@@ -111,7 +111,7 @@
     transform: translate(-50%);
   }
   
-  /*------------main body-------------------*/
+  /*------------ MAIN BODY -------------------*/
   .product-detail {
     display: flex;
     align-items: flex-start;
@@ -152,14 +152,14 @@
     margin: 10px 0;
   }
   
-  /*----------------options-----------------------*/
+  /*---------------- OPTIONS -----------------------*/
   
   #orderForm {
     display: flex;
     flex-direction: column;
   }
   
-  /* Styling for dropdown boxes */
+  /* STYLING FOR DROPDOWN BOXES */
   #orderForm select {
     width: 200px; 
     height: 50px; 
@@ -171,7 +171,7 @@
   }
   
   
-  /* Styling for the dropdown arrow */
+  /* STYLING FOR DROPDOWN ARROW */
   #orderForm select::-ms-expand {
     display: none; /
   }
@@ -182,8 +182,7 @@
     border-color: #004154; 
   }
   
-  /*-------------addition buttons-----------*/
-/*--------number of water-------------*/
+  /*------------- ADDITION BUTTON -----------*/
 .quantity {
   display: flex;
   justify-content: center;
@@ -216,7 +215,7 @@
   background: transparent;
 }
 
-  /*-adddddddddd to cart---------------button*/
+  /* ADD TO CART BUTTON */
   .sideinfo{
     display: flex;
     flex-direction: column;
@@ -276,7 +275,7 @@
     opacity: 1;
   }
   
- /* Add-to-cart button style */
+ /* ADD TO CART BUTTON STYLE */
 .addtocart {
   display: block;
   width: 100%;
