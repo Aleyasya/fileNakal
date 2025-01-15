@@ -279,13 +279,20 @@ header::after {
   .links {
     flex-direction: column;
   }
-  .col-4 {
-    flex-basis: 25%;
-    flex-direction: column;
+
+  .col-3 {
+    flex-basis: 100%;
+    min-width: 100%;
+    margin: 15px auto;
+    padding: 15px;
+    width: 50%;
+    max-width: 700px;
   }
   .row {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
   }
   .navbar-left,
   .navbar-right {
