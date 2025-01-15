@@ -16,6 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Eater&family=Gotu&family=Jacques+Francois&family=Julius+Sans+One&family=Parkinsans:wght@300..800&family=Playwrite+NL+Guides&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
 
+  <!--MAP-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
   <!--FOOTER-->
   <link rel="stylesheet" href="footer.css" />
   <link
@@ -84,7 +88,33 @@
         </div>
       </div>
     </div>
-  
+<br>
+<hr>
+
+  <!--MAPPP-->
+    <div class="map-container">
+      <h2 class="map-title">Oscent Store Location</h2>
+      <div id="map"></div>
+  </div>
+  <style>
+    #map {
+        height: 500px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        
+    }
+    .map-container {
+      
+        padding: 20px;
+        font-family: "Jacques Francois", serif;
+    }
+    .map-title {
+    
+        text-align: center;
+        margin-bottom: 25px;
+    }
+</style>
 
 
   </body>
@@ -182,4 +212,32 @@
       footer.scrollIntoView({ behavior: "smooth" });
     });
   </script>
+<!-- MAPpppppp-->
+<script>
+  window.onload = function() {
+      // Initialize the map with your coordinates
+      const map = L.map('map').setView([3.252736017412767, 101.73263558440244], 20);
+
+      // Add OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Create a custom red icon
+      const redIcon = L.icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+      });
+
+      // Add a red marker for your shop
+      L.marker([3.252736017412767, 101.73263558440244], {icon: redIcon})
+          .bindPopup('Oscent store')
+          .addTo(map);
+  }
+</script>
 </html>
